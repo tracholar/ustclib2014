@@ -1,0 +1,1496 @@
+﻿<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>中国科学技术大学图书馆</title>
+
+<link href="css/reset.css" type="text/css" rel="stylesheet"/>
+<link href="css/global.css" type="text/css" rel="stylesheet"/>
+
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/downselect.js"></script>
+
+<script type="text/javascript">
+jQuery(document).ready(function(){
+	var qcloud={};
+	$('[_t_nav]').hover(function(){
+		var _nav = $(this).attr('_t_nav');
+		clearTimeout( qcloud[ _nav + '_timer' ] );
+		qcloud[ _nav + '_timer' ] = setTimeout(function(){
+		$('[_t_nav]').each(function(){
+		$(this)[ _nav == $(this).attr('_t_nav') ? 'addClass':'removeClass' ]('nav-up-selected');
+		});
+		$('#'+_nav).stop(true,true).slideDown(200);
+		}, 150);
+	},function(){
+		var _nav = $(this).attr('_t_nav');
+		clearTimeout( qcloud[ _nav + '_timer' ] );
+		qcloud[ _nav + '_timer' ] = setTimeout(function(){
+		$('[_t_nav]').removeClass('nav-up-selected');
+		$('#'+_nav).stop(true,true).slideUp(200);
+		}, 150);
+	});
+});
+</script>
+
+</head>
+
+<body>
+	<div class="InnerWrap">
+    	<div class="InnerBg"></div>
+        <div class="TopCont">
+        	<div class="TopWrap">
+            	<div class="TopLogo"><img src="images/logo.png"/></div>
+                
+                <div class="TopRight">
+               		<div class="TopLoginContact">
+                    	<ul class="TopLogin">
+                        	<li><a href="">登录图书馆门户</a></li>
+                            <li><a href="">登录个人图书馆</a></li>
+                        </ul>
+                        <ul class="TopContact">
+                        	<li><a href="">联系我们</a></li>
+                            <li><a href="">English</a></li>
+                        </ul>
+                    </div>
+                    
+                    <ul class="GloablNav">
+                    	<li><a href="index.html">首页</a></li>
+                        <li _t_nav="Overview"><a href="">本馆概况</a></li>
+                        <li _t_nav="Source"><a href="">馆藏资源</a></li>
+                        <li _t_nav="Service"><a href="">服务指南</a></li>
+                        <li _t_nav="Searchbook"><a href="">查找文献</a></li>
+                        <li _t_nav="Courseware"><a href="">课件天地</a></li>
+                    </ul>
+                    
+                    <div class="navigation-down">
+						<div id="Overview" class="nav-down-menu menu-1" style="display: none;" _t_nav="Overview">
+							<div class="navigation-down-inner">
+                            	<ul>
+                                	<li><a href="opentime.html" target="_blank">开放时间</a></li>
+                                    <li><a href="nowleader.html" target="_blank">现任领导</a></li>
+                                    <li><a href="libdistribution.html" target="_blank">馆藏分布</a></li>
+                                    <li><a href="libraryintro.html" target="_blank">本馆简介</a></li>
+                                	<li><a href="branchintro.html" target="_blank">部室介绍</a></li>
+                                    <li><a href="organiz.html">组织结构</a></li>
+                                    <li><a href="http://202.38.93.31:808/360.html" target="_blank">图书馆风貌</a></li>
+                                    <li><a href="history.html" target="_blank">历史沿革</a></li>
+                                </ul>
+							</div>
+						</div>
+						<div id="Source" class="nav-down-menu menu-3 menu-1" style="display: none;" _t_nav="Source">
+							<div class="navigation-down-inner">
+                            	<ul>
+                                	<li><a href="sci-tech.html" target="_blank">科技查新</a></li>
+                                    <li><a href="innertransfer.html" target="_blank">文献传递与馆际互借</a></li>
+                                    <li><a href="donation.html" target="_blank">接受图书捐赠办法</a></li>
+                                    <li><a href="librecommend.html" target="_blank">图书荐购</a></li>
+                                    <li><a href="readernotice.html" target="_blank">读者须知</a></li>
+                                    <li><a href="relatedservice.html" target="_blank">相关服务联系人</a></li>
+                                    <li><a href="serviceprocess.html" target="_blank">服务流程</a></li>
+                                    <li><a href="" target="_blank">查收查引</a></li>
+                                    <li><a href="abordlibnav.html" target="_blank">国内外图书馆导航</a></li>
+                                    <li><a href="treecenter.html" target="_blank">树华中心</a></li>
+                                    <li><a href="faq.html" target="_blank">FAQ常见问题</a></li>
+                                    <li><a href="" target="_blank">邀您乐玩校园生活</a></li>
+                                    <li><a href="" target="_blank">课件天地</a></li>
+                                    <li><a href="" target="_blank">学位论文提交</a></li>
+                                    <li><a href="" target="_blank">图书馆志愿者</a></li>
+                                    <li><a href="http://liser.ustc.edu.cn/uchome/index.php" target="_blank">过刊传递</a></li>
+                                </ul>	
+							</div>
+						</div>
+						<div id="Service" class="nav-down-menu menu-3 menu-1" style="display: none;" _t_nav="Service">
+							<div class="navigation-down-inner">
+                            	<ul>
+                                	<li><a href="copyright.html" target="_blank">版权声明</a></li>
+                                    <li><a href="traildatabase.html" target="_blank">试用数据库</a></li>
+                                    <li><a href="" target="_blank">外文电子期刊</a></li>
+                                    <li><a href="" target="_blank">本馆特色资源</a></li>
+                                	<li><a href="" target="_blank">免费资源与学会组织</a></li>
+                                    <li><a href="" target="_blank">外文电子图书</a></li>
+                                    <li><a href="" target="_blank">中文数据库</a></li>
+                                    <li><a href="" target="_blank">外文参考数据库</a></li>
+                                </ul>			
+							</div>
+						</div>
+						<div id="Searchbook" class="nav-down-menu menu-3 menu-1" style="display: none;" _t_nav="Searchbook">
+							<div class="navigation-down-inner">
+                            	<ul>
+                                	<li><a href="opencourse.html" target="_blank">查找网络公开课</a></li>
+                                    <li><a href="searchbook.html" target="_blank">查找图书</a></li>
+                                    <li><a href="conferencepaper.html" target="_blank">查找会议文献</a></li>
+                                    <li><a href="academicpaper.html" target="_blank">查找学位论文</a></li>
+                                	<li><a href="periodicalpaper.html" target="_blank">查找期刊</a></li>
+                                    <li><a href="patentdocument.html" target="_blank">查找专利文献</a></li>
+                                    <li><a href="searchvideo.html" target="_blank">查找影音资料</a></li>
+                                    <li><a href="" target="_blank">查找其他文献</a></li>
+                                </ul>						
+							</div>
+						</div>
+       					<div id="Courseware" class="nav-down-menu menu-3 menu-1" style="display: none;" _t_nav="Courseware">
+							<div class="navigation-down-inner">
+                            	<ul>
+                                	<li><a href="knowinnovation.html" target="_blank">知识创新服务</a></li>
+                                    <li><a href="knowlecturehall.html" target="_blank">大讲堂</a></li>
+                                    <li><a href="innerseminar.html" target="_blank">系列专题讲座</a></li>
+                                    <li><a href="inforetrieval.html" target="_blank">信息检索教学</a></li>
+                                    <li><a href="newlytrain.html" target="_blank">新生用户培训 </a></li>
+                                </ul>			
+							</div>
+						</div>
+					</div>
+                    
+                 <!---------TopRight End------------------>   
+                </div>                
+            </div>
+        <!-----------Top Cont End-------------->    
+        </div>
+        
+        <div class="InnerMainCont">
+            <div class="DataBaseMapWrap">
+            	<div class="DataBaseOutWrap">
+                	<ul id="DataBaseOutTab">
+                      <li><a href="#" name="#DataBaseOutTab1">按类型分类</a></li>
+                      <li><a href="#" name="#DataBaseOutTab2">按学科分类</a></li>
+                  	</ul>
+                    
+                    <div class="DataBaseCont" id="DataBaseCont">
+                    	<div id="DataBaseContInner">
+                        	
+                            <div id="DataBaseOutTab1">
+                              	<div class="DataBaseInCont">
+                                  <ul class="DataBaseTab01">
+                                    <li mid="0" class="DataBaseTab01-0 DataBaseTab01-cus-0"><span><a href="#">试用数据库</a></span></li>
+                                    <li mid="1" class="DataBaseTab01-1"><span><a href="#">特色资源数据库</a></span></li>
+                                    <li mid="3" class="DataBaseTab01-2"><span><a href="#">中文数据库</a></span></li>
+                                    <li mid="4" class="DataBaseTab01-3"><span><a href="#">外文参考数据库</a></span></li>
+                                    <li mid="5" class="DataBaseTab01-4"><span><a href="#">外文电子期刊</a></span></li>
+                                    <li mid="6" class="DataBaseTab01-5"><span><a href="#">外文电子图书</a></span></li>
+                                    <li mid="7" class="DataBaseTab01-6"><span><a href="#">数学专业类资源</a></span></li>
+                                  </ul>
+                                  
+                                  <div class="DataBaseCont01">
+                                      <div class="DataBaseList01">
+                                          <div class="DataBaseList01-con" mid="0" style="">
+                                          	<ul>
+                                            	<li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                            </ul>                 	               
+                                          </div>
+                                          <div class="DataBaseList01-con" mid="1" style="">
+                                          	<ul>
+                                            	<li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                          	</ul>              	               
+                                          </div>
+                                          <div class="DataBaseList01-con" mid="2" style="">
+                                          	<ul>
+                                            	<li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                          	</ul>                   	               
+                                          </div>
+                                          <div class="DataBaseList01-con" mid="3" style="">
+                                          	<ul>
+                                            	<li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                          	</ul>                   	               
+                                          </div>
+                                          <div class="DataBaseList01-con" mid="4" style="">
+                                          	<ul>
+                                            	<li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                          	</ul>                  	               
+                                          </div>
+                                          <div class="DataBaseList01-con" mid="5" style="">
+                                          	<ul>
+                                            	<li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                          	</ul>                  	               
+                                          </div>
+                                          <div class="DataBaseList01-con" mid="6" style="">
+                                          	<ul>
+                                            	<li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                          	</ul>                  	               
+                                          </div>
+                                      </div>
+                                  </div>
+                                    <!------DataBaseInCont End------------->    
+                            	</div>        	               
+                          	</div>
+                            
+                            <div  id="DataBaseOutTab2">
+                            	<div class="DataBaseInCont">
+                                  <ul class="DataBaseTab02">
+                                    <li mid="0" class="DataBaseTab02-0 DataBaseTab02-cus-0"><span><a href="#">数学</a></span></li>
+                                    <li mid="1" class="DataBaseTab02-1"><span><a href="#">物理</a></span></li>
+                                    <li mid="2" class="DataBaseTab02-2"><span><a href="#">化学</a></span></li>
+                                    <li mid="3" class="DataBaseTab02-3"><span><a href="#">材料</a></span></li>
+                                    <li mid="4" class="DataBaseTab02-4"><span><a href="#">生物</a></span></li>
+                                    <li mid="5" class="DataBaseTab02-5"><span><a href="#">地空</a></span></li>
+                                    <li mid="6" class="DataBaseTab02-6"><span><a href="#">工程</a></span></li>
+                                    <li mid="7" class="DataBaseTab02-7"><span><a href="#">电子</a></span></li>
+                                    <li mid="8" class="DataBaseTab02-8"><span><a href="#">计算机</a></span></li>
+                                    <li mid="9" class="DataBaseTab02-9"><span><a href="#">人文</a></span></li>
+                                    <li mid="10" class="DataBaseTab02-10"><span><a href="#">管理</a></span></li>
+                                  </ul>
+                                  
+                                  <div class="DataBaseCont02">
+                                      <div class="DataBaseList02">
+                                          <div class="DataBaseList02-con" mid="0" style="">
+                                          	<ul>
+                                            	<li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                          	</ul>                 	               
+                                          </div>
+                                          <div class="DataBaseList02-con" mid="1" style="">
+                                          	<ul>
+                                            	<li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                          	</ul>              	               
+                                          </div>
+                                          <div class="DataBaseList02-con" mid="2" style="">
+                                          	<ul>
+                                            	<li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                          	</ul>                  	               
+                                          </div>
+                                          <div class="DataBaseList02-con" mid="3" style="">
+                                          	<ul>
+                                            	<li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                          	</ul>                	               
+                                          </div>
+                                          <div class="DataBaseList02-con" mid="4" style="">
+                                          	<ul>
+                                            	<li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                          	</ul>                  	               
+                                          </div>
+                                          <div class="DataBaseList02-con" mid="5" style="">
+                                          	<ul>
+                                            	<li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                          	</ul>                  	               
+                                          </div>
+                                          <div class="DataBaseList02-con" mid="6" style="">
+                                          	<ul>
+                                            	<li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                          	</ul>                  	               
+                                          </div>
+                                          <div class="DataBaseList02-con" mid="7" style="">
+                                          	<ul>
+                                            	<li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                          	</ul>                  	               
+                                          </div>
+                                          <div class="DataBaseList02-con" mid="8" style="">
+                                          	<ul>
+                                            	<li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                          	</ul>                  	               
+                                          </div>
+                                          <div class="DataBaseList02-con" mid="9" style="">
+                                          	<ul>
+                                            	<li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                          	</ul>                 	               
+                                          </div>
+                                          <div class="DataBaseList02-con" mid="10" style="">
+                                          	<ul>
+                                            	<li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                                <li>
+                                                	<h1><a href="">中文图书在线"书香江淮"</a></h1>
+                                                    <div class="DBMapLink">
+                                                    	<div class="DBItem">
+                                                        	<a class="DBLink DBIcon_01"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">EBSCO其他资源访问</a></div>
+                                                      	</div>
+                                                     	<div class="DBItem">
+                                                          	<a class="DBLink DBIcon_02"></a>
+                                                          	<div class="DBItemContent"><a href="http://sc.chinaz.com/">点击访问</a></div>
+                                                      </div>                                                                              
+                                                  	</div>
+                                                    <span>58次</span>                                                  
+                                                </li>
+                                          	</ul>                 	               
+                                          </div>
+                                      </div>
+                                  </div>
+                                    <!------DataBaseInCont End------------->    
+                            	</div>                    	               
+                          	</div>
+                          
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>				
+            
+            <div id="InnerFoot">
+            	<div class="InnerFootWrap">
+                	<div class="InFootFirstGrid">
+                    	<h2>友情链接</h2>
+                        <ul>
+                    		<li><a href="">+ 图书馆3D全景</a></li>
+                        	<li><a href="">+ 中国科大</a></li>
+                        	<li><a href="">+ 安徽省高校数字图书馆</a></li>
+                        	<li><a href="">+ CALIS</a></li>
+                        	<li><a href="">+ 国家科学图书馆</a></li>
+                        	<li><a href="">+ 栗子网(LISER)</a></li>
+                        	<li><a href="">+ 瀚海星云</a></li>
+                        	<li><a href="">+ 我校SCI最新成果</a></li>
+                        	<li><a href="">+ 在线科普图片</a></li>
+                        	<li><a href="">+ 会议室预订</a></li>
+                    	</ul>
+                    </div>
+                    <div class="InFootSecondGrid">
+                    	<h2>联系我们</h2>
+                        <ul>
+                    		<li>地址: 安徽省合肥市金寨路中国科大东区(230026)</li>
+                        	<li>电话: (0551)63602325、63607815、63602328 </li>
+                        	<li>传真:  (0551)63602325 </li>
+                        	<li>馆长:  lstian@ustc.edu.cn、liuyan@ustc.edu.cn</li>
+                    	</ul>
+                    </div>
+                </div>
+        	</div>
+            
+        </div>
+        
+        
+    <!--------------InnerWrap End -------------------->    
+    </div>
+
+<script type="text/javascript">
+function resetTabs(){
+	$("#DataBaseContInner > div").slideUp(); //隐藏所有内容
+	$("#DataBaseOutTab a").attr("id",""); //重置“id”   
+}
+
+var myUrl = window.location.href; //取得超链地址
+var myUrlTab = myUrl.substring(myUrl.indexOf("#")); 
+var myUrlTabName = myUrlTab.substring(0,4);
+
+(function(){
+	$("#DataBaseContInner > div").slideUp(); // 最初隐藏所有内容
+	$("#DataBaseOutTab li:first a").attr("id","DBOutTabCur"); // 激活第一个选项卡
+	$("#DataBaseContInner > div:first").slideDown(); // 显示第一个选项卡的内容
+
+	$("#DataBaseOutTab a").on('click',function(e) {
+		e.preventDefault();
+		if ($(this).attr("id") == "DBOutTabCur"){ //检测当前选项卡
+			return       
+		}else{             
+			resetTabs();
+			$(this).attr("id","DBOutTabCur"); // 激活这
+			$($(this).attr('name')).slideDown(); // 显示当前选项卡的内容
+		}
+	});
+
+	for (i = 1; i <= $("#DataBaseOutTab li").length; i++) {
+		if(myUrlTab == myUrlTabName + i){
+			resetTabs();
+			$("a[name='"+myUrlTab+"']").attr("id","DBOutTabCur"); // 激活url选项卡
+			$(myUrlTab).slideDown(); // 显示url选项卡内容      
+		}
+	}
+})()
+</script>
+
+<script type="text/javascript">
+var n_c_ser = 0;//设置初始值为0；
+function t_player(cur){
+	$('ul.DataBaseTab01 > li').eq(n_c_ser).removeClass("DataBaseTab01-cus-"+n_c_ser);
+	if(cur==null){
+		n_c_ser = ++n_c_ser % 7;   //递加函数
+	}else{
+		n_c_ser = cur;
+	}
+	if(n_c_ser !=0 ){
+	}
+	
+	$('.DataBaseList01').animate({marginLeft:(-1 * n_c_ser * 1100) + 'px'});//下面内容的动画效果左移动508px；
+
+	$('ul.DataBaseTab01 > li').eq(n_c_ser).addClass("DataBaseTab01-cus-"+n_c_ser);
+}
+
+var n_t = setInterval('t_player()', 10000);//每隔5秒 执行一次
+
+$('ul.DataBaseTab01 > li span').hover(function(){//当我鼠标悬浮上去的时候
+	var self = this;
+	clearInterval(n_t);   //清除动画
+	$('.DataBaseList01').stop();
+	var mid = $(this).parent().index()
+	$('ul.DataBaseTab01 > li').eq(n_c_ser).addClass("DataBaseTab01-cus-"+n_c_ser);
+	t_player(mid);
+},function(e){
+	n_t = setInterval('t_player()', 10000);//当鼠标离开的时候  继续执行上面循环的函数
+});
+</script> 
+
+<script type="text/javascript">
+var n_q = 0;//设置初始值为0；
+function t_play(sor){
+	$('ul.DataBaseTab02 > li').eq(n_q).removeClass("DataBaseTab02-cus-"+n_q);
+	if(sor==null){
+		n_q = ++n_q % 11;   //递加函数
+	}else{
+		n_q = sor;
+	}
+	if(n_q !=0 ){
+	}
+	
+	$('.DataBaseList02').animate({marginLeft:(-1 * n_q * 1100) + 'px'});//下面内容的动画效果左移动508px；
+
+	$('ul.DataBaseTab02 > li').eq(n_q).addClass("DataBaseTab02-cus-"+n_q);
+}
+
+var n_w = setInterval('t_play()', 10000);//每隔5秒 执行一次
+
+$('ul.DataBaseTab02 > li span').hover(function(){//当我鼠标悬浮上去的时候
+	var self = this;
+	clearInterval(n_w);   //清除动画
+	$('.DataBaseList02').stop();
+	var mid = $(this).parent().index()
+	$('ul.DataBaseTab02 > li').eq(n_q).addClass("DataBaseTab02-cus-"+n_q);
+	t_play(mid);
+},function(e){
+	n_w = setInterval('t_play()', 10000);//当鼠标离开的时候  继续执行上面循环的函数
+});
+</script> 
+
+
+<script src="js/jquery-css-transform.js" type="text/javascript"></script>
+<script src="js/jquery-animate-css-rotate-scale.js" type="text/javascript"></script>
+<script>
+	$('.DBItem').hover(
+		function(){
+			var $this = $(this);
+			expand($this);
+		},
+		function(){
+			var $this = $(this);
+			collapse($this);
+		}
+	);
+	function expand($elem){
+		var angle = 0;
+		var t = setInterval(function () {
+			if(angle == 0){
+				clearInterval(t);
+				return;
+			}
+			angle += 40;
+			$('.DBLink',$elem).stop().animate({rotate: '+=-40deg'}, 0);
+		},10);
+		$elem.stop().animate({width:'140px'}, 600)
+		.find('.DBItemContent').fadeIn(400,function(){
+			$(this).find('p').stop(true,true).fadeIn(600);
+		});
+	}
+	function collapse($elem){
+		var angle = 0;
+		var t = setInterval(function () {
+			if(angle == 0){
+				clearInterval(t);
+				return;
+			}
+			angle -= 40;
+			$('.DBLink',$elem).stop().animate({rotate: '+=40deg'}, 0);
+		},10);
+		$elem.stop().animate({width:'22px'}, 600)
+		.find('.DBItemContent').stop(true,true).fadeOut().find('p').stop(true,true).fadeOut();
+	}
+</script>
+    
+</body>
+</html>

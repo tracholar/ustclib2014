@@ -1,0 +1,271 @@
+﻿<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>中国科学技术大学图书馆</title>
+
+<link href="css/reset.css" type="text/css" rel="stylesheet"/>
+<link href="css/global.css" type="text/css" rel="stylesheet"/>
+<link href="css/scrollpagination_demo.css" type="text/css" rel="stylesheet"/>
+
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.fullbg.min.js"></script>
+<script type="text/javascript" src="js/downselect.js"></script>
+<script type="text/javascript" src="js/scrollpagination.js"></script>
+
+<script type="text/javascript">
+jQuery(document).ready(function(){
+	var qcloud={};
+	$('[_t_nav]').hover(function(){
+		var _nav = $(this).attr('_t_nav');
+		clearTimeout( qcloud[ _nav + '_timer' ] );
+		qcloud[ _nav + '_timer' ] = setTimeout(function(){
+		$('[_t_nav]').each(function(){
+		$(this)[ _nav == $(this).attr('_t_nav') ? 'addClass':'removeClass' ]('nav-up-selected');
+		});
+		$('#'+_nav).stop(true,true).slideDown(200);
+		}, 150);
+	},function(){
+		var _nav = $(this).attr('_t_nav');
+		clearTimeout( qcloud[ _nav + '_timer' ] );
+		qcloud[ _nav + '_timer' ] = setTimeout(function(){
+		$('[_t_nav]').removeClass('nav-up-selected');
+		$('#'+_nav).stop(true,true).slideUp(200);
+		}, 150);
+	});
+});
+</script>
+
+</head>
+
+<body>
+	<div class="InnerWrap">
+    	<div class="InnerBg"></div>
+        <div class="TopCont">
+        	<div class="TopWrap">
+            	<div class="TopLogo"><img src="images/logo.png"/></div>
+                
+                <div class="TopRight">
+               		<div class="TopLoginContact">
+                    	<ul class="TopLogin">
+                        	<li><a href="">登录图书馆门户</a></li>
+                            <li><a href="">登录个人图书馆</a></li>
+                        </ul>
+                        <ul class="TopContact">
+                        	<li><a href="">联系我们</a></li>
+                            <li><a href="">English</a></li>
+                        </ul>
+                    </div>
+                    
+                    <ul class="GloablNav">
+                    	<li><a href="index.html">首页</a></li>
+                        <li _t_nav="Overview"><a href="">本馆概况</a></li>
+                        <li _t_nav="Source"><a href="">馆藏资源</a></li>
+                        <li _t_nav="Service"><a href="">服务指南</a></li>
+                        <li _t_nav="Searchbook"><a href="">查找文献</a></li>
+                        <li _t_nav="Courseware"><a href="">课件天地</a></li>
+                    </ul>
+                    
+                    <div class="navigation-down">
+						<div id="Overview" class="nav-down-menu menu-1" style="display: none;" _t_nav="Overview">
+							<div class="navigation-down-inner">
+                            	<ul>
+                                	<li><a href="opentime.html" target="_blank">开放时间</a></li>
+                                    <li><a href="nowleader.html" target="_blank">现任领导</a></li>
+                                    <li><a href="libdistribution.html" target="_blank">馆藏分布</a></li>
+                                    <li><a href="libraryintro.html" target="_blank">本馆简介</a></li>
+                                	<li><a href="branchintro.html" target="_blank">部室介绍</a></li>
+                                    <li><a href="organiz.html">组织结构</a></li>
+                                    <li><a href="http://202.38.93.31:808/360.html" target="_blank">图书馆风貌</a></li>
+                                    <li><a href="history.html" target="_blank">历史沿革</a></li>
+                                </ul>
+							</div>
+						</div>
+						<div id="Source" class="nav-down-menu menu-3 menu-1" style="display: none;" _t_nav="Source">
+							<div class="navigation-down-inner">
+                            	<ul>
+                                	<li><a href="sci-tech.html" target="_blank">科技查新</a></li>
+                                    <li><a href="innertransfer.html" target="_blank">文献传递与馆际互借</a></li>
+                                    <li><a href="donation.html" target="_blank">接受图书捐赠办法</a></li>
+                                    <li><a href="librecommend.html" target="_blank">图书荐购</a></li>
+                                    <li><a href="readernotice.html" target="_blank">读者须知</a></li>
+                                    <li><a href="relatedservice.html" target="_blank">相关服务联系人</a></li>
+                                    <li><a href="serviceprocess.html" target="_blank">服务流程</a></li>
+                                    <li><a href="" target="_blank">查收查引</a></li>
+                                    <li><a href="abordlibnav.html" target="_blank">国内外图书馆导航</a></li>
+                                    <li><a href="treecenter.html" target="_blank">树华中心</a></li>
+                                    <li><a href="faq.html" target="_blank">FAQ常见问题</a></li>
+                                    <li><a href="" target="_blank">邀您乐玩校园生活</a></li>
+                                    <li><a href="" target="_blank">课件天地</a></li>
+                                    <li><a href="" target="_blank">学位论文提交</a></li>
+                                    <li><a href="" target="_blank">图书馆志愿者</a></li>
+                                    <li><a href="http://liser.ustc.edu.cn/uchome/index.php" target="_blank">过刊传递</a></li>
+                                </ul>	
+							</div>
+						</div>
+						<div id="Service" class="nav-down-menu menu-3 menu-1" style="display: none;" _t_nav="Service">
+							<div class="navigation-down-inner">
+                            	<ul>
+                                	<li><a href="copyright.html" target="_blank">版权声明</a></li>
+                                    <li><a href="traildatabase.html" target="_blank">试用数据库</a></li>
+                                    <li><a href="" target="_blank">外文电子期刊</a></li>
+                                    <li><a href="" target="_blank">本馆特色资源</a></li>
+                                	<li><a href="" target="_blank">免费资源与学会组织</a></li>
+                                    <li><a href="" target="_blank">外文电子图书</a></li>
+                                    <li><a href="" target="_blank">中文数据库</a></li>
+                                    <li><a href="" target="_blank">外文参考数据库</a></li>
+                                </ul>			
+							</div>
+						</div>
+						<div id="Searchbook" class="nav-down-menu menu-3 menu-1" style="display: none;" _t_nav="Searchbook">
+							<div class="navigation-down-inner">
+                            	<ul>
+                                	<li><a href="opencourse.html" target="_blank">查找网络公开课</a></li>
+                                    <li><a href="searchbook.html" target="_blank">查找图书</a></li>
+                                    <li><a href="conferencepaper.html" target="_blank">查找会议文献</a></li>
+                                    <li><a href="academicpaper.html" target="_blank">查找学位论文</a></li>
+                                	<li><a href="periodicalpaper.html" target="_blank">查找期刊</a></li>
+                                    <li><a href="patentdocument.html" target="_blank">查找专利文献</a></li>
+                                    <li><a href="searchvideo.html" target="_blank">查找影音资料</a></li>
+                                    <li><a href="" target="_blank">查找其他文献</a></li>
+                                </ul>						
+							</div>
+						</div>
+       					<div id="Courseware" class="nav-down-menu menu-3 menu-1" style="display: none;" _t_nav="Courseware">
+							<div class="navigation-down-inner">
+                            	<ul>
+                                	<li><a href="knowinnovation.html" target="_blank">知识创新服务</a></li>
+                                    <li><a href="knowlecturehall.html" target="_blank">大讲堂</a></li>
+                                    <li><a href="innerseminar.html" target="_blank">系列专题讲座</a></li>
+                                    <li><a href="inforetrieval.html" target="_blank">信息检索教学</a></li>
+                                    <li><a href="newlytrain.html" target="_blank">新生用户培训 </a></li>
+                                </ul>			
+							</div>
+						</div>
+					</div>
+                    
+                 <!---------TopRight End------------------>   
+                </div>                
+            </div>
+        <!-----------Top Cont End-------------->    
+        </div>
+        
+        <div class="InnerMainCont">
+        	<div class="InnerMainContWrap">
+            
+            	<div class="InnerLeft">
+                	<div class="InnerQuickNav">
+                    	<h1><p>快速导航</p><p class="InnerLeftEnTitle">Quick Menu</p></h1>
+                        <ul>
+                        	<li><a href="">数据库地图</a></li>
+                            <li><a href="">科技查新</a></li>
+                            <li><a href="">文献传递与馆际互借</a></li>
+                            <li><a href="">学位论文提交</a></li>
+                            <li><a href="">图书荐购</a></li>
+                            <li><a href="">馆藏书刊目录查询</a></li>
+                            <li><a href="">过刊传递</a></li>
+                            <li><a href="">图书馆志愿者</a></li>
+                        </ul>
+                    </div>
+                    <div class="InnerSourceRank">
+                    	<h1><p>资源排行</p><p class="InnerLeftEnTitle">Resource Rank</p></h1>
+                        <ul>
+                        	<li><a href="">CNKI同方期刊及学位论文</a></li>
+                            <li><a href="">Web of Knowledge</a></li>
+                            <li><a href="">万方数据</a></li>
+                            <li><a href="">SCIE</a></li>
+                            <li><a href="">维普中文科技期刊</a></li>
+                            <li><a href="">超星电子图书</a></li>
+                            <li><a href="">SciFinder</a></li>
+                            <li><a href="">ACS[美国化学会]</a></li>
+                            <li><a href="">Ei</a></li>
+                            <li><a href="">Elsevier ScienceDirect</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="InnerRight">
+                	<h3 class="InnerMapLocation"><a href="">首页</a> - <a href="">新闻动态</a></h3>
+                    <div class="InnerRightCont" id="scrollpaginationdemo">
+                    	<div class="InNewsCont">
+                        	<h1>图书馆为核学院举办检索讲座</h1>
+                            <h3>2010-04-30</h3>
+                            <p>4月23日上午，应核学院辐射防护与环境保护教研室的邀请，校图书馆信息咨询部学科馆员樊亚芳和
+                            于明两位老师，在科大西区科技实验楼1202会议室为组内同学做了题为"图书馆全攻略之科学研究"的精彩报告。</p>
+                            <div class="InNewsImgWrap"><img src="images/news/newsimg01.jpg"/></div>
+                            <p>文献资料查阅是研究生培养阶段非常重要的一个环节，很多刚步入科研行列的新同学对如何查阅文献资料以及如何有效利用图书馆资源往往比较困惑。教研室鉴于同学们的要求和建议下，特邀请图书馆的老师来帮解惑释疑。两位老师以如何在web of science核心合集数据库中寻找想要的徐榭教授的论文为例，详细耐心的指导如何进入数据库地图、确定引文索引、分析精炼检索结果、创建引文报告等等，并介绍了其他一些如EI， INIS等二次数据库的使用方法。此外，两位老师还就如何进行文献传递与馆间互借、如何使用EndNote工具进行了现场操作和指导。同学们积极提问，两位老师一一进行了热情耐心地解答。现场气氛轻松活跃，同学们深感收获颇丰。 文献资料查阅是研究生培养阶段非常重要的一个环节，很多刚步入科研行列的新同学对如何查阅文献资料以及如何有效利用图书馆资源往往比较困惑。教研室鉴于同学们的要求和建议下，特邀请图书馆的老师来帮解惑释疑。两位老师以如何在web of science核心合集数据库中寻找想要的徐榭教授的论文为例，详细耐心的指导如何进入数据库地图、确定引文索引、分析精炼检索结果、创建引文报告等等，并介绍了其他一些如EI， INIS等二次数据库的使用方法。此外，两位老师还就如何进行文献传递与馆间互借、如何使用EndNote工具进行了现场操作和指导。同学们积极提问，两位老师一一进行了热情耐心地解答。现场气氛轻松活跃，同学们深感收获颇丰。 文献资料查阅是研究生培养阶段非常重要的一个环节，很多刚步入科研行列的新同学对如何查阅文献资料以及如何有效利用图书馆资源往往比较困惑。教研室鉴于同学们的要求和建议下，特邀请图书馆的老师来帮解惑释疑。两位老师以如何在web of science核心合集数据库中寻找想要的徐榭教授的论文为例，详细耐心的指导如何进入数据库地图、确定引文索引、分析精炼检索结果、创建引文报告等等，并介绍了其他一些如EI， INIS等二次数据库的使用方法。此外，两位老师还就如何进行文献传递与馆间互借、如何使用EndNote工具进行了现场操作和指导。同学们积极提问，两位老师一一进行了热情耐心地解答。现场气氛轻松活跃，同学们深感收获颇丰。 文献资料查阅是研究生培养阶段非常重要的一个环节，很多刚步入科研行列的新同学对如何查阅文献资料以及如何有效利用图书馆资源往往比较困惑。教研室鉴于同学们的要求和建议下，特邀请图书馆的老师来帮解惑释疑。两位老师以如何在web of science核心合集数据库中寻找想要的徐榭教授的论文为例，详细耐心的指导如何进入数据库地图、确定引文索引、分析精炼检索结果、创建引文报告等等，并介绍了其他一些如EI， INIS等二次数据库的使用方法。此外，两位老师还就如何进行文献传递与馆间互借、如何使用EndNote工具进行了现场操作和指导。同学们积极提问，两位老师一一进行了热情耐心地解答。现场气氛轻松活跃，同学们深感收获颇丰。</p>
+                        </div>
+                        <div class="loading" id="loading">加载更多...</div>
+   						<div class="loading" id="nomoreresults">没有更多内容要显示</div>
+                    </div>
+                </div>
+             <!---------InnerMainContWrap End---------------->   
+            </div>
+            
+            <div id="InnerFoot">
+            	<div class="InnerFootWrap">
+                	<div class="InFootFirstGrid">
+                    	<h2>友情链接</h2>
+                        <ul>
+                    		<li><a href="">+ 图书馆3D全景</a></li>
+                        	<li><a href="">+ 中国科大</a></li>
+                        	<li><a href="">+ 安徽省高校数字图书馆</a></li>
+                        	<li><a href="">+ CALIS</a></li>
+                        	<li><a href="">+ 国家科学图书馆</a></li>
+                        	<li><a href="">+ 栗子网(LISER)</a></li>
+                        	<li><a href="">+ 瀚海星云</a></li>
+                        	<li><a href="">+ 我校SCI最新成果</a></li>
+                        	<li><a href="">+ 在线科普图片</a></li>
+                        	<li><a href="">+ 会议室预订</a></li>
+                    	</ul>
+                    </div>
+                    <div class="InFootSecondGrid">
+                    	<h2>联系我们</h2>
+                        <ul>
+                    		<li>地址: 安徽省合肥市金寨路中国科大东区(230026)</li>
+                        	<li>电话: (0551)63602325、63607815、63602328 </li>
+                        	<li>传真:  (0551)63602325 </li>
+                        	<li>馆长:  lstian@ustc.edu.cn、liuyan@ustc.edu.cn</li>
+                    	</ul>
+                    </div>
+                </div>
+        	</div>
+            
+        </div>
+        
+        
+    <!--------------InnerWrap End -------------------->    
+    </div>
+<script type="text/javascript">
+$(function(){
+	$('#content').scrollPagination({
+		'contentPage': 'democontent.html', // the url you are fetching the results
+		'contentData': {}, // these are the variables you can pass to the request, for example: children().size() to know which page you are
+		'scrollTarget': $(window), // who gonna scroll? in this example, the full window
+		'heightOffset': 5, // it gonna request when scroll is 10 pixels before the page ends
+		'beforeLoad': function(){ // before load function, you can display a preloader div
+			$('#loading').fadeIn();	
+		},
+		'afterLoad': function(elementsLoaded){ // after loading content, you can use this function to animate your new elements
+			 $('#loading').fadeOut();
+			 var i = 0;
+			 $(elementsLoaded).fadeInWithDelay();
+			 if ($('#content').children().size() > 100){ // if more than 100 results already loaded, then stop pagination (only for testing)
+			 	$('#nomoreresults').fadeIn();
+				$('#content').stopScrollPagination();
+			 }
+		}
+	});
+	
+	// code for fade in element by element
+	$.fn.fadeInWithDelay = function(){
+		var delay = 0;
+		return this.each(function(){
+			$(this).delay(delay).animate({opacity:1}, 200);
+			delay += 100;
+		});
+	};
+		   
+});
+</script>
+</body>
+</html>

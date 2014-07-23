@@ -1,0 +1,455 @@
+﻿<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>中国科学技术大学图书馆</title>
+
+<link href="css/reset.css" type="text/css" rel="stylesheet"/>
+<link href="css/global.css" type="text/css" rel="stylesheet"/>
+
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.fullbg.min.js"></script>
+<script type="text/javascript" src="js/downselect.js"></script>
+
+<script type="text/javascript">
+jQuery(document).ready(function(){
+	var qcloud={};
+	$('[_t_nav]').hover(function(){
+		var _nav = $(this).attr('_t_nav');
+		clearTimeout( qcloud[ _nav + '_timer' ] );
+		qcloud[ _nav + '_timer' ] = setTimeout(function(){
+		$('[_t_nav]').each(function(){
+		$(this)[ _nav == $(this).attr('_t_nav') ? 'addClass':'removeClass' ]('nav-up-selected');
+		});
+		$('#'+_nav).stop(true,true).slideDown(200);
+		}, 150);
+	},function(){
+		var _nav = $(this).attr('_t_nav');
+		clearTimeout( qcloud[ _nav + '_timer' ] );
+		qcloud[ _nav + '_timer' ] = setTimeout(function(){
+		$('[_t_nav]').removeClass('nav-up-selected');
+		$('#'+_nav).stop(true,true).slideUp(200);
+		}, 150);
+	});
+});
+</script>
+
+</head>
+
+<body>
+	<div class="InnerWrap">
+    	<div class="InnerBg"></div>
+        <div class="TopCont">
+        	<div class="TopWrap">
+            	<div class="TopLogo"><img src="images/logo.png"/></div>
+                
+                <div class="TopRight">
+               		<div class="TopLoginContact">
+                    	<ul class="TopLogin">
+                        	<li><a href="">登录图书馆门户</a></li>
+                            <li><a href="">登录个人图书馆</a></li>
+                        </ul>
+                        <ul class="TopContact">
+                        	<li><a href="">联系我们</a></li>
+                            <li><a href="">English</a></li>
+                        </ul>
+                    </div>
+                    
+                    <ul class="GloablNav">
+                    	<li><a href="index.html">首页</a></li>
+                        <li _t_nav="Overview"><a href="">本馆概况</a></li>
+                        <li _t_nav="Source"><a href="">馆藏资源</a></li>
+                        <li _t_nav="Service"><a href="">服务指南</a></li>
+                        <li _t_nav="Searchbook"><a href="">查找文献</a></li>
+                        <li _t_nav="Courseware"><a href="">课件天地</a></li>
+                    </ul>
+                    
+                    <div class="navigation-down">
+						<div id="Overview" class="nav-down-menu menu-1" style="display: none;" _t_nav="Overview">
+							<div class="navigation-down-inner">
+                            	<ul>
+                                	<li><a href="opentime.html" target="_blank">开放时间</a></li>
+                                    <li><a href="nowleader.html" target="_blank">现任领导</a></li>
+                                    <li><a href="libdistribution.html" target="_blank">馆藏分布</a></li>
+                                    <li><a href="libraryintro.html" target="_blank">本馆简介</a></li>
+                                	<li><a href="branchintro.html" target="_blank">部室介绍</a></li>
+                                    <li><a href="organiz.html">组织结构</a></li>
+                                    <li><a href="http://202.38.93.31:808/360.html" target="_blank">图书馆风貌</a></li>
+                                    <li><a href="history.html" target="_blank">历史沿革</a></li>
+                                </ul>
+							</div>
+						</div>
+						<div id="Source" class="nav-down-menu menu-3 menu-1" style="display: none;" _t_nav="Source">
+							<div class="navigation-down-inner">
+                            	<ul>
+                                	<li><a href="sci-tech.html" target="_blank">科技查新</a></li>
+                                    <li><a href="innertransfer.html" target="_blank">文献传递与馆际互借</a></li>
+                                    <li><a href="donation.html" target="_blank">接受图书捐赠办法</a></li>
+                                    <li><a href="librecommend.html" target="_blank">图书荐购</a></li>
+                                    <li><a href="readernotice.html" target="_blank">读者须知</a></li>
+                                    <li><a href="relatedservice.html" target="_blank">相关服务联系人</a></li>
+                                    <li><a href="serviceprocess.html" target="_blank">服务流程</a></li>
+                                    <li><a href="" target="_blank">查收查引</a></li>
+                                    <li><a href="abordlibnav.html" target="_blank">国内外图书馆导航</a></li>
+                                    <li><a href="treecenter.html" target="_blank">树华中心</a></li>
+                                    <li><a href="faq.html" target="_blank">FAQ常见问题</a></li>
+                                    <li><a href="" target="_blank">邀您乐玩校园生活</a></li>
+                                    <li><a href="" target="_blank">课件天地</a></li>
+                                    <li><a href="" target="_blank">学位论文提交</a></li>
+                                    <li><a href="" target="_blank">图书馆志愿者</a></li>
+                                    <li><a href="http://liser.ustc.edu.cn/uchome/index.php" target="_blank">过刊传递</a></li>
+                                </ul>	
+							</div>
+						</div>
+						<div id="Service" class="nav-down-menu menu-3 menu-1" style="display: none;" _t_nav="Service">
+							<div class="navigation-down-inner">
+                            	<ul>
+                                	<li><a href="copyright.html" target="_blank">版权声明</a></li>
+                                    <li><a href="traildatabase.html" target="_blank">试用数据库</a></li>
+                                    <li><a href="" target="_blank">外文电子期刊</a></li>
+                                    <li><a href="" target="_blank">本馆特色资源</a></li>
+                                	<li><a href="" target="_blank">免费资源与学会组织</a></li>
+                                    <li><a href="" target="_blank">外文电子图书</a></li>
+                                    <li><a href="" target="_blank">中文数据库</a></li>
+                                    <li><a href="" target="_blank">外文参考数据库</a></li>
+                                </ul>			
+							</div>
+						</div>
+						<div id="Searchbook" class="nav-down-menu menu-3 menu-1" style="display: none;" _t_nav="Searchbook">
+							<div class="navigation-down-inner">
+                            	<ul>
+                                	<li><a href="opencourse.html" target="_blank">查找网络公开课</a></li>
+                                    <li><a href="searchbook.html" target="_blank">查找图书</a></li>
+                                    <li><a href="conferencepaper.html" target="_blank">查找会议文献</a></li>
+                                    <li><a href="academicpaper.html" target="_blank">查找学位论文</a></li>
+                                	<li><a href="periodicalpaper.html" target="_blank">查找期刊</a></li>
+                                    <li><a href="patentdocument.html" target="_blank">查找专利文献</a></li>
+                                    <li><a href="searchvideo.html" target="_blank">查找影音资料</a></li>
+                                    <li><a href="" target="_blank">查找其他文献</a></li>
+                                </ul>						
+							</div>
+						</div>
+       					<div id="Courseware" class="nav-down-menu menu-3 menu-1" style="display: none;" _t_nav="Courseware">
+							<div class="navigation-down-inner">
+                            	<ul>
+                                	<li><a href="knowinnovation.html" target="_blank">知识创新服务</a></li>
+                                    <li><a href="knowlecturehall.html" target="_blank">大讲堂</a></li>
+                                    <li><a href="innerseminar.html" target="_blank">系列专题讲座</a></li>
+                                    <li><a href="inforetrieval.html" target="_blank">信息检索教学</a></li>
+                                    <li><a href="newlytrain.html" target="_blank">新生用户培训 </a></li>
+                                </ul>			
+							</div>
+						</div>
+					</div>
+                    
+                 <!---------TopRight End------------------>   
+                </div>                
+            </div>
+        <!-----------Top Cont End-------------->    
+        </div>
+        
+        <div class="InnerMainCont">
+        	<div class="InnerMainContWrap">
+            
+            	<div class="InnerLeft">
+                	<div class="InnerQuickNav">
+                    	<h1><p>快速导航</p><p class="InnerLeftEnTitle">Quick Menu</p></h1>
+                        <ul>
+                        	<li><a href="">数据库地图</a></li>
+                            <li><a href="">科技查新</a></li>
+                            <li><a href="">文献传递与馆际互借</a></li>
+                            <li><a href="">学位论文提交</a></li>
+                            <li><a href="">图书荐购</a></li>
+                            <li><a href="">馆藏书刊目录查询</a></li>
+                            <li><a href="">过刊传递</a></li>
+                            <li><a href="">图书馆志愿者</a></li>
+                        </ul>
+                    </div>
+                    <div class="InnerSourceRank">
+                    	<h1><p>资源排行</p><p class="InnerLeftEnTitle">Resource Rank</p></h1>
+                        <ul>
+                        	<li><a href="">CNKI同方期刊及学位论文</a></li>
+                            <li><a href="">Web of Knowledge</a></li>
+                            <li><a href="">万方数据</a></li>
+                            <li><a href="">SCIE</a></li>
+                            <li><a href="">维普中文科技期刊</a></li>
+                            <li><a href="">超星电子图书</a></li>
+                            <li><a href="">SciFinder</a></li>
+                            <li><a href="">ACS[美国化学会]</a></li>
+                            <li><a href="">Ei</a></li>
+                            <li><a href="">Elsevier ScienceDirect</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="InnerRight">
+                	<h3 class="InnerMapLocation"><a href="">首页</a> - <a href="">本馆概况</a> - <a href="">开放时间</a></h3>
+                    <div class="InnerRightCont" id="scrollpaginationdemo">
+                    	<div class="OpenTime">
+                        	<h1>开放时间</h1>
+                            <div id="OpenTimeZoneTab">
+                            	
+                                <ul class="ZoneTab">
+									<li mid="0" class="LibZoneTab-0 LibZoneTab-cus-0"><span><a href="#">西区</a></span></li>
+									<li mid="1" class="LibZoneTab-1"><span><a href="#">东区</a></span></li>
+                                    <li mid="2" class="LibZoneTab-2"><span><a href="#">南区</a></span></li>
+								</ul>
+
+								<div class="LibZoneTimeWrap">
+									<div class="LibZoneTimeInner">
+										<div class="LibZonecont-con LibZonecont_list" mid="0" style="">
+                                        	<table align="center" cellspacing="0" cellpadding="0">
+												<tbody>
+													<tr>
+														<th>西区</th>
+														<th>地点</th>
+														<th>周一至周四</th>
+														<th>周五</th>
+														<th>周六</th>
+														<th>周日</th>
+														<th>联系电话</th>
+													</tr>
+													<tr>
+														<td>中文书库</td>
+														<td>1楼（内4层）</td>
+														<td colspan="2">8:00-22:00</td>
+														<td>8:00-17:30</td>
+                                                        <td>8:00-22:00</td>
+                                                        <td>63606474<br>63602332</td>
+													</tr>
+													<tr>
+                                                   		<td>外文书库</td>
+														<td>12楼</td>
+														<td rowspan="4">8:00-11:50<br>14:00-17:40</td>
+														<td rowspan="4">8:00-11:50<br>14:00-16:00</td>
+														<td rowspan="4" colspan="2">---------</td>
+														<td>63607942</td>
+                                                    </tr>
+													<tr>
+														<td>中文报刊<br>阅览室</td>
+														<td>1楼</td>
+                                                        <td>63607487</td>
+                                                    </tr>
+													<tr>
+														<td>外文过刊<br>阅览室</td>
+														<td>8楼</td>
+														<td>63607457</td>
+                                                   	</tr>
+													<tr>
+														<td>外文过刊<br>阅览室</td>
+														<td>9楼</td>
+                                                        <td>63607944</td>
+													</tr>
+													<tr>
+                                                    	<td>树华中心</td>
+                                                        <td>3楼</td>
+														<td colspan="4">8:00-22:00（周一12:00-22:00机器检修）</td>
+                                                        <td>63607434</td>
+                                                    </tr>
+													<tr>
+														<td>工具书<br>阅览室</td>
+														<td rowspan="2">5楼</td>
+														<td rowspan="2">8:00-11:50<br>14:00-17:40</td>
+														<td rowspan="2">8:00-11:50<br>14:00-16:00</td>
+														<td rowspan="2" colspan="2">---------</td>
+														<td rowspan="2">63607947</td>
+													</tr>
+													<tr>
+														<td>日俄文过刊<br>阅览室</td>
+													</tr>
+												</tbody>
+											</table>                                       
+                                        </div>
+
+										<div class="LibZonecont-con LibZonecont_list" mid="1" style="">
+                                        	<table>
+												<tbody>
+                                                	<tr>
+														<th>东区</th>
+														<th>地点</th>
+														<th>周一至周四</th>
+                                                        <th>周五</th>
+														<th>周六</th>
+														<th>周日</th>
+														<th>联系电话</th>
+													</tr>
+													<tr>
+														<td>社科图书<br>借阅一室</td>
+														<td>3楼东</td>
+														<td rowspan="4" colspan="2">8:00-22:00</td>
+														<td rowspan="4">8:00-17:30</td>
+														<td rowspan="4">8:00-22:00</td>
+														<td>63606140</td>
+													</tr>
+													<tr>
+														<td>社科图书<br>借阅二室</td>
+														<td>3楼西</td>
+														<td>63606141</td>
+													</tr>
+													<tr>
+														<td>科技图书<br>借阅室</td>
+														<td>4楼东</td>
+														<td>63607941</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>科技及外文图书借阅室</td>
+                                                        <td>4楼西</td>
+                                                        <td>63607945</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td> 现刊阅览室</td>
+                                                        <td>5楼西</td>
+                                                        <td> 8:00-11:50<br>14:00-17:40</td>
+                                                        <td>8:00-11:50<br>14:00-16:00</td>
+                                                        <td colspan="2">--------</td>
+                                                        <td>63607842</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>英才书苑</td>
+                                                        <td>2楼西</td>
+                                                        <td colspan="2">8:00-22:00</td>
+                                                        <td>8:00-17:30</td>
+                                                        <td>8:00-22:00</td>
+                                                        <td>63606265</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>信息咨询<br>检索查新</td>
+                                                        <td>6楼中</td>
+                                                        <td rowspan="4">8:00-11:50<br>14:00-17:40</td>
+                                                        <td rowspan="4">8:00-11:50<br>14:00-16:00</td>
+                                                        <td rowspan="2" colspan="2">网络服务继续</td>
+                                                        <td>63607832<br>63602330<br>63606504</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>技术支持<br>网络维护</td>
+                                                        <td>5楼中</td>
+                                                        <td>63602331<br>63606494</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>纸质书刊<br>采购编目</td>
+                                                        <td>1楼西</td>
+                                                        <td rowspan="2" colspan="2">--------</td>
+                                                        <td>63607424<br>63602329</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>行政办公<br></td>
+                                                        <td>6楼东</td>
+                                                        <td>63602325<br>63602328<br>63607815</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><span style="color: #ff0000">数学分馆</span></td>
+                                                        <td><span style="color: #ff0000">6楼西</span></td>
+                                                        <td colspan="2"><span style="color: #ff0000">8:00-11:30<br>14:00-17:30</span></td>
+                                                        <td colspan="2"><span style="color: #ff0000">--------</span></td>
+                                                        <td><span style="color: #ff0000">63601008</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+										</div>
+                                        
+                                        <div class="LibZonecont-con LibZonecont_list" mid="2" style="">
+                                        	<table>
+                                            	<tbody>
+                                                	<tr>
+                                                        <th>南区</th>
+                                                        <th>地点</th>
+                                                        <th>周一至周四</th>
+                                                        <th>周五</th>
+                                                        <th>周六</th>
+                                                        <th>周日</th>
+                                                        <th>联系电话</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>中文书库</td>
+                                                        <td>2、3、4楼</td>
+                                                        <td rowspan="2">8:00-11:50<br>14:00-17:40</td>
+                                                        <td rowspan="2">8:00-11:50<br>14:00-16:00</td>
+                                                        <td>--------</td>
+                                                        <td>8:00-11:50<br>14:00-17:40</td>
+                                                        <td>63492240</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>中文报刊<br>阅览室</td>
+                                                        <td>5楼</td>
+                                                        <td colspan="2">--------</td>
+                                                        <td>63492273</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+										</div>       
+									</div>
+								</div>
+                                
+                            </div>
+                        <!----------opentime end---------------->    
+                        </div>
+                    </div>
+                </div>
+             <!---------InnerMainContWrap End---------------->   
+            </div>
+            
+            <div id="InnerFoot">
+            	<div class="InnerFootWrap">
+                	<div class="InFootFirstGrid">
+                    	<h2>友情链接</h2>
+                        <ul>
+                    		<li><a href="">+ 图书馆3D全景</a></li>
+                        	<li><a href="">+ 中国科大</a></li>
+                        	<li><a href="">+ 安徽省高校数字图书馆</a></li>
+                        	<li><a href="">+ CALIS</a></li>
+                        	<li><a href="">+ 国家科学图书馆</a></li>
+                        	<li><a href="">+ 栗子网(LISER)</a></li>
+                        	<li><a href="">+ 瀚海星云</a></li>
+                        	<li><a href="">+ 我校SCI最新成果</a></li>
+                        	<li><a href="">+ 在线科普图片</a></li>
+                        	<li><a href="">+ 会议室预订</a></li>
+                    	</ul>
+                    </div>
+                    <div class="InFootSecondGrid">
+                    	<h2>联系我们</h2>
+                        <ul>
+                    		<li>地址: 安徽省合肥市金寨路中国科大东区(230026)</li>
+                        	<li>电话: (0551)63602325、63607815、63602328 </li>
+                        	<li>传真:  (0551)63602325 </li>
+                        	<li>馆长:  lstian@ustc.edu.cn、liuyan@ustc.edu.cn</li>
+                    	</ul>
+                    </div>
+                </div>
+        	</div>
+            
+        </div>
+        
+        
+    <!--------------InnerWrap End -------------------->    
+    </div>
+<script type="text/javascript">
+var n_c_ser = 0;//设置初始值为0；
+function t_player(cur){
+	$('ul.ZoneTab > li').eq(n_c_ser).removeClass("LibZoneTab-cus-"+n_c_ser);
+	if(cur==null){
+		n_c_ser = ++n_c_ser % 2;   //递加函数
+	}else{
+		n_c_ser = cur;
+	}
+	if(n_c_ser !=0 ){
+	}
+	
+	$('.LibZoneTimeInner').animate({marginLeft:(-1 * n_c_ser * 784) + 'px'});//下面内容的动画效果左移动508px；
+
+	$('ul.ZoneTab > li').eq(n_c_ser).addClass("LibZoneTab-cus-"+n_c_ser);
+}
+
+var n_t = setInterval('t_player()', 24000);//每隔5秒 执行一次
+
+$('ul.ZoneTab > li span').hover(function(){//当我鼠标悬浮上去的时候
+	var self = this;
+	clearInterval(n_t);   //清除动画
+	$('.LibZoneTimeInner').stop();
+	var mid = $(this).parent().index()
+	$('ul.ZoneTab > li').eq(n_c_ser).addClass("LibZoneTab-cus-"+n_c_ser);
+	t_player(mid);
+},function(e){
+	n_t = setInterval('t_player()', 24000);//当鼠标离开的时候  继续执行上面循环的函数
+});
+</script>
+</body>
+</html>

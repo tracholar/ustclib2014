@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>中国科学技术大学图书馆</title>
+
+<link href="css/reset.css" type="text/css" rel="stylesheet"/>
+<link href="css/global.css" type="text/css" rel="stylesheet"/>
+
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.fullbg.min.js"></script>
+<script type="text/javascript" src="js/downselect.js"></script>
+
+<script type="text/javascript">
+jQuery(document).ready(function(){
+	var qcloud={};
+	$('[_t_nav]').hover(function(){
+		var _nav = $(this).attr('_t_nav');
+		clearTimeout( qcloud[ _nav + '_timer' ] );
+		qcloud[ _nav + '_timer' ] = setTimeout(function(){
+		$('[_t_nav]').each(function(){
+		$(this)[ _nav == $(this).attr('_t_nav') ? 'addClass':'removeClass' ]('nav-up-selected');
+		});
+		$('#'+_nav).stop(true,true).slideDown(200);
+		}, 150);
+	},function(){
+		var _nav = $(this).attr('_t_nav');
+		clearTimeout( qcloud[ _nav + '_timer' ] );
+		qcloud[ _nav + '_timer' ] = setTimeout(function(){
+		$('[_t_nav]').removeClass('nav-up-selected');
+		$('#'+_nav).stop(true,true).slideUp(200);
+		}, 150);
+	});
+});
+</script>
+
+</head>
+
+<body>
+	<div class="InnerWrap">
+    	<div class="InnerBg"></div>
+        <div class="TopCont">
+        	<div class="TopWrap">
+            	<div class="TopLogo"><img src="images/logo.png"/></div>
+                
+                <div class="TopRight">
+               		<div class="TopLoginContact">
+                    	<ul class="TopLogin">
+                        	<li><a href="">登录图书馆门户</a></li>
+                            <li><a href="">登录个人图书馆</a></li>
+                        </ul>
+                        <ul class="TopContact">
+                        	<li><a href="">联系我们</a></li>
+                            <li><a href="">English</a></li>
+                        </ul>
+                    </div>
+                    
+                    <ul class="GloablNav">
+                    	<li><a href="index.html">首页</a></li>
+                        <li _t_nav="Overview"><a href="">本馆概况</a></li>
+                        <li _t_nav="Source"><a href="">馆藏资源</a></li>
+                        <li _t_nav="Service"><a href="">服务指南</a></li>
+                        <li _t_nav="Searchbook"><a href="">查找文献</a></li>
+                        <li _t_nav="Courseware"><a href="">课件天地</a></li>
+                    </ul>
+                    
+                    <div class="navigation-down">
+						<div id="Overview" class="nav-down-menu menu-1" style="display: none;" _t_nav="Overview">
+							<div class="navigation-down-inner">
+                            	<ul>
+                                	<li><a href="opentime.html" target="_blank">开放时间</a></li>
+                                    <li><a href="nowleader.html" target="_blank">现任领导</a></li>
+                                    <li><a href="libdistribution.html" target="_blank">馆藏分布</a></li>
+                                    <li><a href="libraryintro.html" target="_blank">本馆简介</a></li>
+                                	<li><a href="branchintro.html" target="_blank">部室介绍</a></li>
+                                    <li><a href="organiz.html">组织结构</a></li>
+                                    <li><a href="http://202.38.93.31:808/360.html" target="_blank">图书馆风貌</a></li>
+                                    <li><a href="history.html" target="_blank">历史沿革</a></li>
+                                </ul>
+							</div>
+						</div>
+						<div id="Source" class="nav-down-menu menu-3 menu-1" style="display: none;" _t_nav="Source">
+							<div class="navigation-down-inner">
+                            	<ul>
+                                	<li><a href="sci-tech.html" target="_blank">科技查新</a></li>
+                                    <li><a href="innertransfer.html" target="_blank">文献传递与馆际互借</a></li>
+                                    <li><a href="donation.html" target="_blank">接受图书捐赠办法</a></li>
+                                    <li><a href="librecommend.html" target="_blank">图书荐购</a></li>
+                                    <li><a href="readernotice.html" target="_blank">读者须知</a></li>
+                                    <li><a href="relatedservice.html" target="_blank">相关服务联系人</a></li>
+                                    <li><a href="serviceprocess.html" target="_blank">服务流程</a></li>
+                                    <li><a href="" target="_blank">查收查引</a></li>
+                                    <li><a href="abordlibnav.html" target="_blank">国内外图书馆导航</a></li>
+                                    <li><a href="treecenter.html" target="_blank">树华中心</a></li>
+                                    <li><a href="faq.html" target="_blank">FAQ常见问题</a></li>
+                                    <li><a href="" target="_blank">邀您乐玩校园生活</a></li>
+                                    <li><a href="" target="_blank">课件天地</a></li>
+                                    <li><a href="" target="_blank">学位论文提交</a></li>
+                                    <li><a href="" target="_blank">图书馆志愿者</a></li>
+                                    <li><a href="http://liser.ustc.edu.cn/uchome/index.php" target="_blank">过刊传递</a></li>
+                                </ul>	
+							</div>
+						</div>
+						<div id="Service" class="nav-down-menu menu-3 menu-1" style="display: none;" _t_nav="Service">
+							<div class="navigation-down-inner">
+                            	<ul>
+                                	<li><a href="copyright.html" target="_blank">版权声明</a></li>
+                                    <li><a href="traildatabase.html" target="_blank">试用数据库</a></li>
+                                    <li><a href="" target="_blank">外文电子期刊</a></li>
+                                    <li><a href="" target="_blank">本馆特色资源</a></li>
+                                	<li><a href="" target="_blank">免费资源与学会组织</a></li>
+                                    <li><a href="" target="_blank">外文电子图书</a></li>
+                                    <li><a href="" target="_blank">中文数据库</a></li>
+                                    <li><a href="" target="_blank">外文参考数据库</a></li>
+                                </ul>			
+							</div>
+						</div>
+						<div id="Searchbook" class="nav-down-menu menu-3 menu-1" style="display: none;" _t_nav="Searchbook">
+							<div class="navigation-down-inner">
+                            	<ul>
+                                	<li><a href="opencourse.html" target="_blank">查找网络公开课</a></li>
+                                    <li><a href="searchbook.html" target="_blank">查找图书</a></li>
+                                    <li><a href="conferencepaper.html" target="_blank">查找会议文献</a></li>
+                                    <li><a href="academicpaper.html" target="_blank">查找学位论文</a></li>
+                                	<li><a href="periodicalpaper.html" target="_blank">查找期刊</a></li>
+                                    <li><a href="patentdocument.html" target="_blank">查找专利文献</a></li>
+                                    <li><a href="searchvideo.html" target="_blank">查找影音资料</a></li>
+                                    <li><a href="" target="_blank">查找其他文献</a></li>
+                                </ul>						
+							</div>
+						</div>
+       					<div id="Courseware" class="nav-down-menu menu-3 menu-1" style="display: none;" _t_nav="Courseware">
+							<div class="navigation-down-inner">
+                            	<ul>
+                                	<li><a href="knowinnovation.html" target="_blank">知识创新服务</a></li>
+                                    <li><a href="knowlecturehall.html" target="_blank">大讲堂</a></li>
+                                    <li><a href="innerseminar.html" target="_blank">系列专题讲座</a></li>
+                                    <li><a href="inforetrieval.html" target="_blank">信息检索教学</a></li>
+                                    <li><a href="newlytrain.html" target="_blank">新生用户培训 </a></li>
+                                </ul>			
+							</div>
+						</div>
+					</div>
+                    
+                 <!---------TopRight End------------------>   
+                </div>                
+            </div>
+        <!-----------Top Cont End-------------->    
+        </div>
+        
+        <div class="InnerMainCont">
+        	<div class="InnerMainContWrap">
+            
+            	<div class="InnerLeft">
+                	<div class="InnerQuickNav">
+                    	<h1><p>快速导航</p><p class="InnerLeftEnTitle">Quick Menu</p></h1>
+                        <ul>
+                        	<li><a href="">数据库地图</a></li>
+                            <li><a href="">科技查新</a></li>
+                            <li><a href="">文献传递与馆际互借</a></li>
+                            <li><a href="">学位论文提交</a></li>
+                            <li><a href="">图书荐购</a></li>
+                            <li><a href="">馆藏书刊目录查询</a></li>
+                            <li><a href="">过刊传递</a></li>
+                            <li><a href="">图书馆志愿者</a></li>
+                        </ul>
+                    </div>
+                    <div class="InnerSourceRank">
+                    	<h1><p>资源排行</p><p class="InnerLeftEnTitle">Resource Rank</p></h1>
+                        <ul>
+                        	<li><a href="">CNKI同方期刊及学位论文</a></li>
+                            <li><a href="">Web of Knowledge</a></li>
+                            <li><a href="">万方数据</a></li>
+                            <li><a href="">SCIE</a></li>
+                            <li><a href="">维普中文科技期刊</a></li>
+                            <li><a href="">超星电子图书</a></li>
+                            <li><a href="">SciFinder</a></li>
+                            <li><a href="">ACS[美国化学会]</a></li>
+                            <li><a href="">Ei</a></li>
+                            <li><a href="">Elsevier ScienceDirect</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="InnerRight">
+                	<h3 class="InnerMapLocation"><a href="">首页</a> - <a href="">查找专利文献</a></h3>
+                    <div class="InnerRightCont">
+                    	<h1 class="InComWrapTitle">查找专利文献</h1> 
+                    	<div class="PatentDocWrap">
+                        	
+                            <p><strong>专利文献</strong>是包含已经申请或被确认为发现、发明、实用新型和工业品外观设计的研究、设计、开发和试验成果的有关资料，以及保护发明人、专利所有人及工业品外观设计和实用新型注册证书持有人权利的有关资料的已出版或未出版的文件（或其摘要）的总称。专利文献按一般的理解主要是指各国专利局的正式出版物。例如：<strong>专利说明书</strong>、专利公报、专利文摘、专利索引、专利分类表等</p>
+                            <p><strong>专利说明书</strong>是指各国专利局或国际性专利组织出版的各种类型说明书的统称，是专利文献的主体，包括未经过专利性审查的申请说明书，以及经过专利性审查的专利说明书。专利说明书的主要作用是公开新的技术信息，并确定法律保护的范围。在专利说明书中能够得到申请专利的全部技术信息和准确的专利权保护范围的法律信息</p>
+                            
+                            <h2 class="InSearchBookTitle">图书馆数据库</h2>
+                            <p><a href="">万方数据库专利检索</a>查询中国各领域的专利信息</p>
+                            <p><a href="">DII德温特专利索引</a>检索到包括美国和中国在内的全球重要专利信息</p>
+                            
+                            <h2 class="InSearchBookTitle">访问网络免费网站获取</h2>
+                            <p><a href="">百度专利搜索</a>查询中国各领域的专利信息</p>
+                            <p><a href="">Google Patents</a>检索到所有美国的专利</p>
+                            <p class="PeriodicalPaperNew" style="padding-bottom:0px;"><a href="">http://www.freepatentsonline.com/</a>（网站可以检索美国专利、欧洲专利、世界专利的全文、日本专利的文摘，特点：可以利用化学分子式检索；可以分企业、学科等检索）<span>New</span></p>
+                            <p class="PeriodicalPaperNew"><a href="">Soopat专利搜索</a>（专业的中文专利搜索引擎，提供中外专利检索服务，及专利相关的的科技、法律、商业等内容 其中的专利分析功能比较新颖）<span>New</span></p>
+                            <h2 class="InSearchBookTitle">访问专利局网站获取</h2>
+                            <p>通过访问各国专利局网站的专利检索系统，一样可以获取专利文献的全文</p>
+                            <p><a href="">国家知识产权局专利检索数据库</a>（阅读全文需要安装图形控件）</p>
+                            <p><a href="">欧洲专利局网上专利检索</a></p>
+                            <p><a href="">美国专利商标局网上专利检索</a></p>
+                            <p><a href="">日本特许厅网上专利检索（英文版）</a></p>
+                            <p><a href="">世界知识产权组织网上专利检索</a></p>
+                            <p><a href="">英国专利局网上专利检索</a></p>
+                            <p><a href="">德国专利商标局网上专利检索</a></p>
+                            <p><a href="">瑞士联邦知识产权局网上专利检索</a></p>
+                            <p><a href="">香港知识产权署网上检索系统</a></p>
+                            <p><a href="">澳门特别行政区经济局</a></p>
+                            
+                            <h2 class="InSearchBookTitle">问图书馆员</h2>
+                            <p>如果通过以上途径还不能满足您的需求，请<a href="">"问图书馆员"</a>，我们会给您满意的答复</p>
+                                                                                  
+                        </div>
+                    </div>
+                </div>
+             <!---------InnerMainContWrap End---------------->   
+            </div>
+            
+            <div id="InnerFoot">
+            	<div class="InnerFootWrap">
+                	<div class="InFootFirstGrid">
+                    	<h2>友情链接</h2>
+                        <ul>
+                    		<li><a href="">+ 图书馆3D全景</a></li>
+                        	<li><a href="">+ 中国科大</a></li>
+                        	<li><a href="">+ 安徽省高校数字图书馆</a></li>
+                        	<li><a href="">+ CALIS</a></li>
+                        	<li><a href="">+ 国家科学图书馆</a></li>
+                        	<li><a href="">+ 栗子网(LISER)</a></li>
+                        	<li><a href="">+ 瀚海星云</a></li>
+                        	<li><a href="">+ 我校SCI最新成果</a></li>
+                        	<li><a href="">+ 在线科普图片</a></li>
+                        	<li><a href="">+ 会议室预订</a></li>
+                    	</ul>
+                    </div>
+                    <div class="InFootSecondGrid">
+                    	<h2>联系我们</h2>
+                        <ul>
+                    		<li>地址: 安徽省合肥市金寨路中国科大东区(230026)</li>
+                        	<li>电话: (0551)63602325、63607815、63602328 </li>
+                        	<li>传真:  (0551)63602325 </li>
+                        	<li>馆长:  lstian@ustc.edu.cn、liuyan@ustc.edu.cn</li>
+                    	</ul>
+                    </div>
+                </div>
+        	</div>
+            
+        </div>
+        
+        
+    <!--------------InnerWrap End -------------------->    
+    </div>
+</body>
+</html>

@@ -1,0 +1,370 @@
+﻿<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>中国科学技术大学图书馆</title>
+
+<link href="css/reset.css" type="text/css" rel="stylesheet"/>
+<link href="css/global.css" type="text/css" rel="stylesheet"/>
+
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.fullbg.min.js"></script>
+<script type="text/javascript" src="js/downselect.js"></script>
+
+<script type="text/javascript">
+jQuery(document).ready(function(){
+	var qcloud={};
+	$('[_t_nav]').hover(function(){
+		var _nav = $(this).attr('_t_nav');
+		clearTimeout( qcloud[ _nav + '_timer' ] );
+		qcloud[ _nav + '_timer' ] = setTimeout(function(){
+		$('[_t_nav]').each(function(){
+		$(this)[ _nav == $(this).attr('_t_nav') ? 'addClass':'removeClass' ]('nav-up-selected');
+		});
+		$('#'+_nav).stop(true,true).slideDown(200);
+		}, 150);
+	},function(){
+		var _nav = $(this).attr('_t_nav');
+		clearTimeout( qcloud[ _nav + '_timer' ] );
+		qcloud[ _nav + '_timer' ] = setTimeout(function(){
+		$('[_t_nav]').removeClass('nav-up-selected');
+		$('#'+_nav).stop(true,true).slideUp(200);
+		}, 150);
+	});
+});
+</script>
+
+</head>
+
+<body>
+	<div class="InnerWrap">
+    	<div class="InnerBg"></div>
+        <div class="TopCont">
+        	<div class="TopWrap">
+            	<div class="TopLogo"><img src="images/logo.png"/></div>
+                
+                <div class="TopRight">
+               		<div class="TopLoginContact">
+                    	<ul class="TopLogin">
+                        	<li><a href="">登录图书馆门户</a></li>
+                            <li><a href="">登录个人图书馆</a></li>
+                        </ul>
+                        <ul class="TopContact">
+                        	<li><a href="">联系我们</a></li>
+                            <li><a href="">English</a></li>
+                        </ul>
+                    </div>
+                    
+                    <ul class="GloablNav">
+                    	<li><a href="index.html">首页</a></li>
+                        <li _t_nav="Overview"><a href="">本馆概况</a></li>
+                        <li _t_nav="Source"><a href="">馆藏资源</a></li>
+                        <li _t_nav="Service"><a href="">服务指南</a></li>
+                        <li _t_nav="Searchbook"><a href="">查找文献</a></li>
+                        <li _t_nav="Courseware"><a href="">课件天地</a></li>
+                    </ul>
+                    
+                    <div class="navigation-down">
+						<div id="Overview" class="nav-down-menu menu-1" style="display: none;" _t_nav="Overview">
+							<div class="navigation-down-inner">
+                            	<ul>
+                                	<li><a href="opentime.html" target="_blank">开放时间</a></li>
+                                    <li><a href="nowleader.html" target="_blank">现任领导</a></li>
+                                    <li><a href="libdistribution.html" target="_blank">馆藏分布</a></li>
+                                    <li><a href="libraryintro.html" target="_blank">本馆简介</a></li>
+                                	<li><a href="branchintro.html" target="_blank">部室介绍</a></li>
+                                    <li><a href="organiz.html">组织结构</a></li>
+                                    <li><a href="http://202.38.93.31:808/360.html" target="_blank">图书馆风貌</a></li>
+                                    <li><a href="history.html" target="_blank">历史沿革</a></li>
+                                </ul>
+							</div>
+						</div>
+						<div id="Source" class="nav-down-menu menu-3 menu-1" style="display: none;" _t_nav="Source">
+							<div class="navigation-down-inner">
+                            	<ul>
+                                	<li><a href="sci-tech.html" target="_blank">科技查新</a></li>
+                                    <li><a href="innertransfer.html" target="_blank">文献传递与馆际互借</a></li>
+                                    <li><a href="donation.html" target="_blank">接受图书捐赠办法</a></li>
+                                    <li><a href="librecommend.html" target="_blank">图书荐购</a></li>
+                                    <li><a href="readernotice.html" target="_blank">读者须知</a></li>
+                                    <li><a href="relatedservice.html" target="_blank">相关服务联系人</a></li>
+                                    <li><a href="serviceprocess.html" target="_blank">服务流程</a></li>
+                                    <li><a href="" target="_blank">查收查引</a></li>
+                                    <li><a href="abordlibnav.html" target="_blank">国内外图书馆导航</a></li>
+                                    <li><a href="treecenter.html" target="_blank">树华中心</a></li>
+                                    <li><a href="faq.html" target="_blank">FAQ常见问题</a></li>
+                                    <li><a href="" target="_blank">邀您乐玩校园生活</a></li>
+                                    <li><a href="" target="_blank">课件天地</a></li>
+                                    <li><a href="" target="_blank">学位论文提交</a></li>
+                                    <li><a href="" target="_blank">图书馆志愿者</a></li>
+                                    <li><a href="http://liser.ustc.edu.cn/uchome/index.php" target="_blank">过刊传递</a></li>
+                                </ul>	
+							</div>
+						</div>
+						<div id="Service" class="nav-down-menu menu-3 menu-1" style="display: none;" _t_nav="Service">
+							<div class="navigation-down-inner">
+                            	<ul>
+                                	<li><a href="copyright.html" target="_blank">版权声明</a></li>
+                                    <li><a href="traildatabase.html" target="_blank">试用数据库</a></li>
+                                    <li><a href="" target="_blank">外文电子期刊</a></li>
+                                    <li><a href="" target="_blank">本馆特色资源</a></li>
+                                	<li><a href="" target="_blank">免费资源与学会组织</a></li>
+                                    <li><a href="" target="_blank">外文电子图书</a></li>
+                                    <li><a href="" target="_blank">中文数据库</a></li>
+                                    <li><a href="" target="_blank">外文参考数据库</a></li>
+                                </ul>			
+							</div>
+						</div>
+						<div id="Searchbook" class="nav-down-menu menu-3 menu-1" style="display: none;" _t_nav="Searchbook">
+							<div class="navigation-down-inner">
+                            	<ul>
+                                	<li><a href="opencourse.html" target="_blank">查找网络公开课</a></li>
+                                    <li><a href="searchbook.html" target="_blank">查找图书</a></li>
+                                    <li><a href="conferencepaper.html" target="_blank">查找会议文献</a></li>
+                                    <li><a href="academicpaper.html" target="_blank">查找学位论文</a></li>
+                                	<li><a href="periodicalpaper.html" target="_blank">查找期刊</a></li>
+                                    <li><a href="patentdocument.html" target="_blank">查找专利文献</a></li>
+                                    <li><a href="searchvideo.html" target="_blank">查找影音资料</a></li>
+                                    <li><a href="" target="_blank">查找其他文献</a></li>
+                                </ul>						
+							</div>
+						</div>
+       					<div id="Courseware" class="nav-down-menu menu-3 menu-1" style="display: none;" _t_nav="Courseware">
+							<div class="navigation-down-inner">
+                            	<ul>
+                                	<li><a href="knowinnovation.html" target="_blank">知识创新服务</a></li>
+                                    <li><a href="knowlecturehall.html" target="_blank">大讲堂</a></li>
+                                    <li><a href="innerseminar.html" target="_blank">系列专题讲座</a></li>
+                                    <li><a href="inforetrieval.html" target="_blank">信息检索教学</a></li>
+                                    <li><a href="newlytrain.html" target="_blank">新生用户培训 </a></li>
+                                </ul>			
+							</div>
+						</div>
+					</div>
+                    
+                 <!---------TopRight End------------------>   
+                </div>                
+            </div>
+        <!-----------Top Cont End-------------->    
+        </div>
+        
+        <div class="InnerMainCont">
+        	<div class="InnerMainContWrap">
+            
+            	<div class="InnerLeft">
+                	<div class="InnerQuickNav">
+                    	<h1><p>快速导航</p><p class="InnerLeftEnTitle">Quick Menu</p></h1>
+                        <ul>
+                        	<li><a href="">数据库地图</a></li>
+                            <li><a href="">科技查新</a></li>
+                            <li><a href="">文献传递与馆际互借</a></li>
+                            <li><a href="">学位论文提交</a></li>
+                            <li><a href="">图书荐购</a></li>
+                            <li><a href="">馆藏书刊目录查询</a></li>
+                            <li><a href="">过刊传递</a></li>
+                            <li><a href="">图书馆志愿者</a></li>
+                        </ul>
+                    </div>
+                    <div class="InnerSourceRank">
+                    	<h1><p>资源排行</p><p class="InnerLeftEnTitle">Resource Rank</p></h1>
+                        <ul>
+                        	<li><a href="">CNKI同方期刊及学位论文</a></li>
+                            <li><a href="">Web of Knowledge</a></li>
+                            <li><a href="">万方数据</a></li>
+                            <li><a href="">SCIE</a></li>
+                            <li><a href="">维普中文科技期刊</a></li>
+                            <li><a href="">超星电子图书</a></li>
+                            <li><a href="">SciFinder</a></li>
+                            <li><a href="">ACS[美国化学会]</a></li>
+                            <li><a href="">Ei</a></li>
+                            <li><a href="">Elsevier ScienceDirect</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="InnerRight">
+                	<h3 class="InnerMapLocation"><a href="">首页</a> - <a href="">馆藏分布</a></h3>
+                    <div class="InnerRightCont">
+                    	<div class="ReaderNoticeWrap">
+                        	<h1>读者须知</h1>
+                            <h2>中国科学技术大学图书馆读者须知</h2>
+                            
+                            <h3>§ 总 则</h3>
+                            <ul>
+                            	<li>（一）全校教职员工、学生都是图书馆服务对象。所有师生均可以多种方式使用图书馆的图书、期刊、电子资源、空间资源</li>
+                                <li>（二）校内师生读者凭一卡通，经过门禁或门卫检查方可入馆</li>
+                                <li>（三）外单位或者校外读者来馆检索资料、联系工作、参观访问，须携带介绍信或身份证明，经门卫核实，然后由相关部门安排接待，或去使用文献资源</li>
+                                <li>（四）请讲究文明礼貌，注意衣冠整洁。穿拖鞋、背心和酗酒等，谢绝入馆</li>
+                                <li>（五）入馆后可以讲书包、公文包等物品放入存包柜内。离馆时请把物品带走，以便他人能够继续使用存包柜</li>
+                                <li>（六）请保持馆内安静、整洁，做文明读者，以免影响他人。同时，请爱护图书馆公共财物、设施，凡盗窃、损坏书刊（剪、撕、涂、画等），以及破坏公共财物者，按学校以及图书馆相关规定进行赔偿、处理</li>
+                                <li>（七）图书馆是重点防火单位，严禁在馆内任何地方吸烟、用火；馆内电源插座，只允许使用学习类电子产品，其它电器严禁使用。违者按学校安全防火规定处理</li>
+                                <li>（八）各院系的图书馆、资料室，目前没有纳入图书馆统一调度管理，读者如要利用这部分文献，请与具体单位联系</li>
+                                <li>（九）请读者注意经常浏览图书馆主页、以及BBS的Library版块，了解图书馆的相关规定以及动态信息，以便更好地利用图书馆</li>
+                            </ul>
+                            
+                            <h3>§ 读者注册规定</h3>
+                            <ul>
+                            	<li>（一）我校所有的正式教职员工，以及正式录取的研究生、本科生、全日制成教学生，由学校有关部门提供录取名单，图书馆在数据库管理系统注册后，即具有图书馆读者身份，凭一卡通可以到图书馆使用所有的文献资源</li>
+                                <li>（二）科学院或其他国家部委委托我校代培的研究生，由研究生院提供名册，图书馆将按正常录取研究生一样对待</li>
+                                <li>（三）博士后等需要到图书馆办理离校手续的流动人员，由学校相关部门证明，凭一卡通可以到图书馆办理注册读者身份</li>
+                                <li>（四）校内各院系、部门自行接待来自国内外的短期工作和进修人员、开发部和课题组聘任的工作人员等，可以凭相关身份证明（学生证等）到图书馆查阅、复印资料，可以在校园网内使用图书馆的电子资源</li>
+                                <li>（五）上述短期聘用或进修人员不受图书馆离校手续控制，图书馆原则上不予办理读者注册。如果确有外借图书的需求，必须要有主管院系或者学校相关部门与图书馆协商，并提供证明担保，承担相关责任，方可办理注册手续</li>
+                                <li>（六）所有注册读者在办理完离校手续后，其读者注册信息将从图书馆管理系统的数据库中清除</li>
+                                <li>（七）校外读者如果需要短期或者临时使用图书馆资源，需要与图书馆办公室联系办理相关手续。具有本馆读者身份后，就可以进馆阅览图书期刊、使用电子资源，但是不能外借图书</li>
+                            </ul>
+                            
+                            <h3>§ 图书借阅规则</h3>
+                            <ul>
+                            	<li>（一）图书借书册数和期限
+                                	<table>
+                                    	<tr>
+                                        	<td>读者类型</td>
+                                            <td>正常借期</td>
+                                            <td>限借册数</td>
+                                            <td>本地最大册数</td>
+                                            <td>最大续借次数</td>
+                                            <td>到期提前续借天数</td>
+                                            <td>续借时间</td>
+                                        </tr>
+                                        <tr>
+                                        	<td>本科生</td>
+                                            <td>60天</td>
+                                            <td>8册</td>
+                                            <td>8册</td>
+                                            <td>1次</td>
+                                            <td>10天</td>
+                                            <td>30天</td>
+                                        </tr>
+                                        <tr>
+                                        	<td>硕博研</td>
+                                            <td>60天</td>
+                                            <td>8册</td>
+                                            <td>8册</td>
+                                            <td>1次</td>
+                                            <td>10天</td>
+                                            <td>30天</td>
+                                        </tr>
+                                        <tr>
+                                        	<td>成教</td>
+                                            <td>60天</td>
+                                            <td>4册</td>
+                                            <td>4册</td>
+                                            <td>1次</td>
+                                            <td>10天</td>
+                                            <td>30天</td>
+                                        </tr>
+                                        <tr>
+                                        	<td>教师</td>
+                                            <td>60天</td>
+                                            <td>8册</td>
+                                            <td>8册</td>
+                                            <td>1次</td>
+                                            <td>20天</td>
+                                            <td>45天</td>
+                                        </tr>
+                                        <tr>
+                                        	<td>职工</td>
+                                            <td>60天</td>
+                                            <td>4册</td>
+                                            <td>4册</td>
+                                            <td>1次</td>
+                                            <td>10天</td>
+                                            <td>30天</td>
+                                        </tr>
+                                    </table>
+                                    <p>特注：东区外文科技书库，对研究生及教工提供借阅：正常借期15天，限借册数3册，本地最大册数3册，最大续借次数1次，到期提前续借天数3天，续借时间7天</p>
+                                </li>
+                                <li>（二）请读者自觉使用代书牌，从架上取出图书时应将代书牌插在图书相应位置。翻阅后不准备外借的图书，请按代书牌位置自行归架，或交由工作人员处理</li>
+                                <li>（三）借书时卡中必须没有超期的图书，并且卡中欠款未达到10元，否则系统中不能办理手续</li>
+                                <li>（四）图书（尤其各种画册）借出时，请读者先检查一下有无缺页和损坏情况，如有，须告诉图书馆工作人员加盖缺损印章。如还书时发现有缺损而又未盖章确认的，则由读者承担责任</li>
+                                <li>（五）图书归还时，请归还到图书所在馆藏地，或者使用自助还书机</li>
+                                <li>（六）除中外文图书外，其它馆藏的现刊、过刊、内部资料等，一律不外借，只能在室内查阅或复印，有特殊情况请与工作人员说明</li>
+                                <li>（七）寒暑假期间，图书馆会根据实际情况设置延期还书日以方便读者</li>
+                                <li>（八）按照学校的规定，读者因工作调动、毕业、休学、退学、短期学习结束等原因离校或者因为本硕连读、硕博连读改变身份，均需由本人或者担保人还清所借图书资料，方可签办离校手续或继续注册</li>
+                                <li>（九）一卡通是在书库办理外借图书手续的唯一凭证，请读者一定要妥为保管，借书时须持本人一卡通办理。若不慎丢失一卡通请立即挂失，挂失前的一切借书记录由一卡通所有者本人负责</li>
+                            </ul>
+                            
+                            <h3>§ 相关处罚规定</h3>
+                            <ul>
+                            	<li>图书馆藏书为学校教学、科研的重要资源,为了保障馆藏的完整性和系统性、确保书刊的正常流通、维护广大读者利用书刊的权利，特制定以下条例：</li>
+                                <li>（一）图书馆的所有书刊资料是国有资产，未办理借阅手续，不得私自拿走，违者从重处罚。擅自带出书库属偷窃行为</li>
+                                <li>（二）读者所借图书资料，务必按规定时间归还，逾期不还者，每册每天罚款0.05元。当欠款超过十元，暂停借书权限</li>
+                                <li>（三）读者所借图书资料，如有遗失，应在2个月内赔偿原版或再版的本图书，另收加工费5元。否则需按以下情况赔偿：</li>
+                                <li>① 1987年以前的中文图书按原书价5倍赔偿，1987年以后的中文图书按原书价3倍赔偿</li>
+                                <li>② 内部交流文献和外文图书按原书价5倍赔偿</li>
+                                <li>③ 期刊、多卷书、丛书遗失其中一册，按全年或全套定价加倍赔偿，（其余卷期不退）</li>
+                                <li>④ 读者如果找到丢失的图书，凭缴费单退还款项</li>
+                                <li>（四）读者不得勾画、损污、撕坏馆藏书刊资料，违者按原书刊价格3倍罚款</li>
+                                <li>（五）本规定解释权属于图书馆</li>
+                            </ul>
+                            
+                            <h3>§ 电子资源使用规定</h3>
+                            <ul>
+                            	<li>（一）全校教职员工、学生都是图书馆服务对象，均可以通过校园网使用图书馆购买的各种网络数据库、镜像电子资源、以及光盘资料等</li>
+                                <li>（二）读者要使用电子资源，必须有合法的校园网IP权限，例如固定IP、网络通、VPN等，与此相关的网络账号申请及设置，请咨询学校网络中心</li>
+                                <li>（三）图书馆会尽量争取购买或者开通更多的电子资源，请读者经常关注图书馆主页、BBS上面信息，了解有关电子资源的动态</li>
+                                <li>如果在使用上有问题，可以通过电话、邮件、BBS等方式与图书馆相关部门联系咨询</li>
+                                <li>（四）图书馆在西区、南区设有专门的电子阅览室，读者可以选择使用</li>
+                                <li>（五）科大图书馆严格遵守并维护数据库出版者和原作者的知识产权，也请校园网用户严格遵守版权法的规定，不要批量下载数据或将数据用于任何商业或其他营利性用途，不要私设代理提供校外人员使用。上述情况一经发现，图书馆将有权停止违规IP的使用权限，并通报给学校有关部门做出处理</li>
+                            </ul>
+                            
+                            <h3>§ 阅览室管理规定</h3>
+                            <ul>
+                            	<li>（一）图书馆设有多个期刊、图书、电子资源阅览室，校内读者一律凭一卡通进入上述阅览室；校外读者凭图书馆发放的阅览证进入，或由馆内指定人员带领</li>
+                                <li>（二）图书馆书库和阅览室均实行开架阅览，读者自行查阅时请注意避免乱架，影响他人使用。书刊阅读完毕，请放回原处，或者交由工作人员处理</li>
+                                <li>（三）阅览室的书刊资料仅供室内阅读，可在室内复印，或者办理手续外出复印，未经许可一律不准拿出阅览室</li>
+                                <li>（四）请读者爱护书刊资料，严禁涂画、污损和撕毁</li>
+                                <li>（五）请保持室内安静、环境整洁，不要喧哗、吵闹，不在室内接听拨打手机，避免影响他人学习</li>
+                            </ul>
+                            
+                            <h3>§ 自习室管理规定</h3>
+                            <ul>
+                            	<li>（一）凡本校持证读者均可入室学习，外校读者谢绝入内</li>
+                                <li>（二）请保持安静，关闭通讯工具的声音，不得大声喧哗、吵闹，不要在室内接听拨打手机，以免影响他人学习</li>
+                                <li>（三）请保持室内整洁，严禁吸烟，不准随地吐痰、乱丢杂物、纸屑，尤其不准将口香糖吐在地上，垃圾请投入垃圾箱内</li>
+                                <li>（四）馆内的自习区不得占座。不准用书本等物品占座位，离馆时应将物品带走，图书馆管理人员不定期清理存放在室内的物品，不负责保管</li>
+                                <li>（五）请自行保管好贵重物品，重要证件和贵重物品要随身携带。如有遗失，责任自负</li>
+                                <li>（六）请自觉遵守上述规定，服从工作人员的管理，做文明读者</li>
+                            </ul>
+                                                        
+                        </div>
+                    </div>
+                </div>
+             <!---------InnerMainContWrap End---------------->   
+            </div>
+            
+            <div id="InnerFoot">
+            	<div class="InnerFootWrap">
+                	<div class="InFootFirstGrid">
+                    	<h2>友情链接</h2>
+                        <ul>
+                    		<li><a href="">+ 图书馆3D全景</a></li>
+                        	<li><a href="">+ 中国科大</a></li>
+                        	<li><a href="">+ 安徽省高校数字图书馆</a></li>
+                        	<li><a href="">+ CALIS</a></li>
+                        	<li><a href="">+ 国家科学图书馆</a></li>
+                        	<li><a href="">+ 栗子网(LISER)</a></li>
+                        	<li><a href="">+ 瀚海星云</a></li>
+                        	<li><a href="">+ 我校SCI最新成果</a></li>
+                        	<li><a href="">+ 在线科普图片</a></li>
+                        	<li><a href="">+ 会议室预订</a></li>
+                    	</ul>
+                    </div>
+                    <div class="InFootSecondGrid">
+                    	<h2>联系我们</h2>
+                        <ul>
+                    		<li>地址: 安徽省合肥市金寨路中国科大东区(230026)</li>
+                        	<li>电话: (0551)63602325、63607815、63602328 </li>
+                        	<li>传真:  (0551)63602325 </li>
+                        	<li>馆长:  lstian@ustc.edu.cn、liuyan@ustc.edu.cn</li>
+                    	</ul>
+                    </div>
+                </div>
+        	</div>
+            
+        </div>
+        
+        
+    <!--------------InnerWrap End -------------------->    
+    </div>
+</body>
+</html>

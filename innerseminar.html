@@ -1,0 +1,638 @@
+﻿<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>中国科学技术大学图书馆</title>
+
+<link href="css/reset.css" type="text/css" rel="stylesheet"/>
+<link href="css/global.css" type="text/css" rel="stylesheet"/>
+
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.fullbg.min.js"></script>
+<script type="text/javascript" src="js/downselect.js"></script>
+
+<script type="text/javascript">
+jQuery(document).ready(function(){
+	var qcloud={};
+	$('[_t_nav]').hover(function(){
+		var _nav = $(this).attr('_t_nav');
+		clearTimeout( qcloud[ _nav + '_timer' ] );
+		qcloud[ _nav + '_timer' ] = setTimeout(function(){
+		$('[_t_nav]').each(function(){
+		$(this)[ _nav == $(this).attr('_t_nav') ? 'addClass':'removeClass' ]('nav-up-selected');
+		});
+		$('#'+_nav).stop(true,true).slideDown(200);
+		}, 150);
+	},function(){
+		var _nav = $(this).attr('_t_nav');
+		clearTimeout( qcloud[ _nav + '_timer' ] );
+		qcloud[ _nav + '_timer' ] = setTimeout(function(){
+		$('[_t_nav]').removeClass('nav-up-selected');
+		$('#'+_nav).stop(true,true).slideUp(200);
+		}, 150);
+	});
+});
+</script>
+
+</head>
+
+<body>
+	<div class="InnerWrap">
+    	<div class="InnerBg"></div>
+        <div class="TopCont">
+        	<div class="TopWrap">
+            	<div class="TopLogo"><img src="images/logo.png"/></div>
+                
+                <div class="TopRight">
+               		<div class="TopLoginContact">
+                    	<ul class="TopLogin">
+                        	<li><a href="">登录图书馆门户</a></li>
+                            <li><a href="">登录个人图书馆</a></li>
+                        </ul>
+                        <ul class="TopContact">
+                        	<li><a href="">联系我们</a></li>
+                            <li><a href="">English</a></li>
+                        </ul>
+                    </div>
+                    
+                    <ul class="GloablNav">
+                    	<li><a href="index.html">首页</a></li>
+                        <li _t_nav="Overview"><a href="">本馆概况</a></li>
+                        <li _t_nav="Source"><a href="">馆藏资源</a></li>
+                        <li _t_nav="Service"><a href="">服务指南</a></li>
+                        <li _t_nav="Searchbook"><a href="">查找文献</a></li>
+                        <li _t_nav="Courseware"><a href="">课件天地</a></li>
+                    </ul>
+                    
+                    <div class="navigation-down">
+						<div id="Overview" class="nav-down-menu menu-1" style="display: none;" _t_nav="Overview">
+							<div class="navigation-down-inner">
+                            	<ul>
+                                	<li><a href="opentime.html" target="_blank">开放时间</a></li>
+                                    <li><a href="nowleader.html" target="_blank">现任领导</a></li>
+                                    <li><a href="libdistribution.html" target="_blank">馆藏分布</a></li>
+                                    <li><a href="libraryintro.html" target="_blank">本馆简介</a></li>
+                                	<li><a href="branchintro.html" target="_blank">部室介绍</a></li>
+                                    <li><a href="organiz.html">组织结构</a></li>
+                                    <li><a href="http://202.38.93.31:808/360.html" target="_blank">图书馆风貌</a></li>
+                                    <li><a href="history.html" target="_blank">历史沿革</a></li>
+                                </ul>
+							</div>
+						</div>
+						<div id="Source" class="nav-down-menu menu-3 menu-1" style="display: none;" _t_nav="Source">
+							<div class="navigation-down-inner">
+                            	<ul>
+                                	<li><a href="sci-tech.html" target="_blank">科技查新</a></li>
+                                    <li><a href="innertransfer.html" target="_blank">文献传递与馆际互借</a></li>
+                                    <li><a href="donation.html" target="_blank">接受图书捐赠办法</a></li>
+                                    <li><a href="librecommend.html" target="_blank">图书荐购</a></li>
+                                    <li><a href="readernotice.html" target="_blank">读者须知</a></li>
+                                    <li><a href="relatedservice.html" target="_blank">相关服务联系人</a></li>
+                                    <li><a href="serviceprocess.html" target="_blank">服务流程</a></li>
+                                    <li><a href="" target="_blank">查收查引</a></li>
+                                    <li><a href="abordlibnav.html" target="_blank">国内外图书馆导航</a></li>
+                                    <li><a href="treecenter.html" target="_blank">树华中心</a></li>
+                                    <li><a href="faq.html" target="_blank">FAQ常见问题</a></li>
+                                    <li><a href="" target="_blank">邀您乐玩校园生活</a></li>
+                                    <li><a href="" target="_blank">课件天地</a></li>
+                                    <li><a href="" target="_blank">学位论文提交</a></li>
+                                    <li><a href="" target="_blank">图书馆志愿者</a></li>
+                                    <li><a href="http://liser.ustc.edu.cn/uchome/index.php" target="_blank">过刊传递</a></li>
+                                </ul>	
+							</div>
+						</div>
+						<div id="Service" class="nav-down-menu menu-3 menu-1" style="display: none;" _t_nav="Service">
+							<div class="navigation-down-inner">
+                            	<ul>
+                                	<li><a href="copyright.html" target="_blank">版权声明</a></li>
+                                    <li><a href="traildatabase.html" target="_blank">试用数据库</a></li>
+                                    <li><a href="" target="_blank">外文电子期刊</a></li>
+                                    <li><a href="" target="_blank">本馆特色资源</a></li>
+                                	<li><a href="" target="_blank">免费资源与学会组织</a></li>
+                                    <li><a href="" target="_blank">外文电子图书</a></li>
+                                    <li><a href="" target="_blank">中文数据库</a></li>
+                                    <li><a href="" target="_blank">外文参考数据库</a></li>
+                                </ul>			
+							</div>
+						</div>
+						<div id="Searchbook" class="nav-down-menu menu-3 menu-1" style="display: none;" _t_nav="Searchbook">
+							<div class="navigation-down-inner">
+                            	<ul>
+                                	<li><a href="opencourse.html" target="_blank">查找网络公开课</a></li>
+                                    <li><a href="searchbook.html" target="_blank">查找图书</a></li>
+                                    <li><a href="conferencepaper.html" target="_blank">查找会议文献</a></li>
+                                    <li><a href="academicpaper.html" target="_blank">查找学位论文</a></li>
+                                	<li><a href="periodicalpaper.html" target="_blank">查找期刊</a></li>
+                                    <li><a href="patentdocument.html" target="_blank">查找专利文献</a></li>
+                                    <li><a href="searchvideo.html" target="_blank">查找影音资料</a></li>
+                                    <li><a href="" target="_blank">查找其他文献</a></li>
+                                </ul>						
+							</div>
+						</div>
+       					<div id="Courseware" class="nav-down-menu menu-3 menu-1" style="display: none;" _t_nav="Courseware">
+							<div class="navigation-down-inner">
+                            	<ul>
+                                	<li><a href="knowinnovation.html" target="_blank">知识创新服务</a></li>
+                                    <li><a href="knowlecturehall.html" target="_blank">大讲堂</a></li>
+                                    <li><a href="innerseminar.html" target="_blank">系列专题讲座</a></li>
+                                    <li><a href="inforetrieval.html" target="_blank">信息检索教学</a></li>
+                                    <li><a href="newlytrain.html" target="_blank">新生用户培训 </a></li>
+                                </ul>			
+							</div>
+						</div>
+					</div>
+                    
+                 <!---------TopRight End------------------>   
+                </div>                
+            </div>
+        <!-----------Top Cont End-------------->    
+        </div>
+        
+        <div class="InnerMainCont">
+        	<div class="InnerMainContWrap">
+            
+            	<div class="InnerLeft">
+                	<div class="InnerQuickNav">
+                    	<h1><p>快速导航</p><p class="InnerLeftEnTitle">Quick Menu</p></h1>
+                        <ul>
+                        	<li><a href="">数据库地图</a></li>
+                            <li><a href="">科技查新</a></li>
+                            <li><a href="">文献传递与馆际互借</a></li>
+                            <li><a href="">学位论文提交</a></li>
+                            <li><a href="">图书荐购</a></li>
+                            <li><a href="">馆藏书刊目录查询</a></li>
+                            <li><a href="">过刊传递</a></li>
+                            <li><a href="">图书馆志愿者</a></li>
+                        </ul>
+                    </div>
+                    <div class="InnerSourceRank">
+                    	<h1><p>资源排行</p><p class="InnerLeftEnTitle">Resource Rank</p></h1>
+                        <ul>
+                        	<li><a href="">CNKI同方期刊及学位论文</a></li>
+                            <li><a href="">Web of Knowledge</a></li>
+                            <li><a href="">万方数据</a></li>
+                            <li><a href="">SCIE</a></li>
+                            <li><a href="">维普中文科技期刊</a></li>
+                            <li><a href="">超星电子图书</a></li>
+                            <li><a href="">SciFinder</a></li>
+                            <li><a href="">ACS[美国化学会]</a></li>
+                            <li><a href="">Ei</a></li>
+                            <li><a href="">Elsevier ScienceDirect</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="InnerRight">
+                	<h3 class="InnerMapLocation"><a href="">首页</a> - <a href="">web of knowleadge大讲堂</a></h3>
+                    <div class="InnerRightCont">
+                    	<h1 class="InComWrapTitle">大讲堂</h1> 
+                    	<div class="InnerSeminarWrap">   
+                        	<p>为帮助读者了解和掌握图书馆的各种电子资源及相关服务的利用方法，图书馆常年举办各种电子资源专题培训讲座。讲座内容涉及我校各种网络数据库的检索方法、文献信息资源的利用、常用软件的使用等等。讲座的内容和时间安排通过图书馆主页、BBS、宣传海报、系统邮件推送等途径提前发布</p>
+                            <p>此外，还可针对各院系的要求进行不定期的专业资源培训与讲座，内容、时间和地点均可根据读者的要求另行安排，欢迎各院系教师与我们联系。联系电话： 63602330-605</p>                      
+                            <table>
+                              <tbody>
+                                  <tr>
+                                      <td colspan="3">
+                                          <p>
+                                              <strong>电子图书数据库</strong></p>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/databases/ppt/chinese/cx.pdf"><span lang="EN-US"><span lang="EN-US">超星电子图书</span></span></a></span></span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/databases/ppt/chinese/dx.pdf"><span lang="EN-US"><span lang="EN-US">读秀图书</span></span></a> <a href="http://lib.ustc.edu.cn/dl/misc/duxiu1.mp4"><span lang="EN-US"><span lang="EN-US">视频版</span></span></a></span></span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/databases/ppt/chinese/apabi.pdf">Apabi<span lang="EN-US"><span lang="EN-US">电子图书</span></span></a></span></span></p>
+                                      </td>
+                                  </tr>
+                                  <tr style="background-color: rgb(248,251,252)">
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/databases/ppt/chinese/ss.pdf"><span lang="EN-US"><span lang="EN-US">书生之家电子图书</span></span></a></span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">&nbsp;
+                                              </p>
+                                      </td>
+                                      <td>
+                                          <p align="left">&nbsp;
+                                              </p>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><span lang="EN-US"><a href="/lib/plus/view.php?dbid=287">Elsevier电子图书</a></span></span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><span lang="EN-US"><a href="/lib/plus/view.php?dbid=277">Wiley电子图书</a></span></span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><span lang="EN-US"><span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/databases/ppt/english/Springer%20eBook.pdf">Springer eBook</a></span></span></span></p>
+                                      </td>
+                                  </tr>
+                                  <tr style="background-color: rgb(248,251,252)">
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><a href="/lib/plus/view.php?dbid=113">Ebrary电子图书</a></span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><a href="/lib/plus/view.php?dbid=115">NetLibrary电子图书</a> </span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/databases/ppt/english/Safari.pdf">SafariSM<span lang="EN-US"><span lang="EN-US">电子图书</span></span></a></span></span></p>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/databases/ppt/english/Springer%20Protocols.pdf">Springer Protocols</a></span></span></p>
+                                      </td>
+                                      <td>&nbsp;
+                                          </td>
+                                      <td>&nbsp;
+                                          </td>
+                                  </tr>
+                                  <tr>
+                                      <td colspan="3">
+                                          <p>
+                                              <strong>电子期刊数据库（包含学位论文等）</strong></p>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td colspan="3">
+                                          <strong>全文数据库</strong></td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/databases/ppt/chinese/cnki.rar">CNKI<span lang="EN-US"><span lang="EN-US">（中国知网）</span></span></a></span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/databases/ppt/chinese/wp.pdf"><span lang="EN-US"><span lang="EN-US">维普中文科技期刊</span></span></a></span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/databases/ppt/chinese/wanfang.rar"><span lang="EN-US"><span lang="EN-US">万方数据</span></span></a></span></p>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US">中宏数据库 <span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/databases/ppt/chinese/zhjy.pdf"><span lang="EN-US"><span lang="EN-US">教研版</span></span></a> <a href="http://lib.ustc.edu.cn/dl/databases/ppt/chinese/zhcy.pdf"><span lang="EN-US"><span lang="EN-US">产业版</span></span></a></span></span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/databases/ppt/chinese/wsbgt.pdf"><span lang="EN-US"><span lang="EN-US">网上视频报告厅</span></span></a></span></span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">&nbsp;
+                                              </p>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US">Elsevier <a href="http://lib.ustc.edu.cn/dl/databases/ppt/english/Elsevier.pdf"><span lang="EN-US"><span lang="EN-US">课件</span></span>1</a> <a href="http://lib.ustc.edu.cn/dl/databases/ppt/english/elsevier2.pdf"><span lang="EN-US"><span lang="EN-US">课件</span></span>2</a></span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/databases/ppt/english/IEL.pdf">IEEE/IET</a></span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/databases/ppt/english/SpringerLink.pdf">Springer</a></span></p>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/databases/ppt/english/EBSCOhost.pdf">EBSCO</a></span></span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/databases/ppt/english/WILEY-BLACKWELL.pdf">John Wiley</a></span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/databases/ppt/english/RSC.pdf">RSC</a></span></p>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <p align="left">
+                                              &nbsp;<span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/databases/ppt/english/WorldSciNet.pdf">WorldSciNet</a></span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US">&nbsp;<span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/databases/ppt/english/Taylor%20&amp;%20Francis.pdf">Taylor &amp; Francis</a></span> </span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">
+                                              &nbsp;<span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/databases/ppt/english/Oxford%20Journals.pdf">Oxford Journals</a></span></p>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <p align="left">
+                                              &nbsp;<a href="http://lib.ustc.edu.cn/dl/databases/ppt/english/IOP.pdf">IOP</a></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">
+                                              &nbsp;<span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/databases/ppt/english/cambridge%20online%20journals.pdf">Cambridge Online Journals</a></span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">&nbsp;
+                                              </p>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td colspan="3">
+                                          <strong>文摘数据库</strong></td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/databases/ppt/english/ISI%20Web%20of%20Knowledge4.0.pdf">Web of Knowledge </a></span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/databases/ppt/english/Science%20Citation%20Index.pdf">Web of Science [SCIE]</a></span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/databases/ppt/english/cpci.pdf">CPCI[ISTP] </a></span></p>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/databases/ppt/english/JCR.pdf">Journal Citation Reports [JCR]</a></span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/databases/ppt/english/EI.pdf">Ei[<span lang="EN-US"><span lang="EN-US">工程索引</span></span>]</a></span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/databases/ppt/english/INSPEC%204.0.pdf">INSPEC[<span lang="EN-US"><span lang="EN-US">科学文摘</span></span>]</a></span></p>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/services/srv2008/ASTM%20for%20USTC.rar">ASTM<span lang="EN-US"><span lang="EN-US">标准数据的使用</span></span></a></span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/databases/ppt/english/Beilstein-Gmelin.pdf">Beilstein/Gmelin</a></span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">
+                                              <a href="http://lib.ustc.edu.cn/dl/databases/ppt/english/scifinder.rar">SciFinder</a></p>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/databases/ppt/english/PQDT.pdf">PQDT<span lang="EN-US"><span lang="EN-US">学位论文文摘</span></span></a></span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/databases/ppt/chinese/cscd.pdf">CSCD<span lang="EN-US"><span lang="EN-US">中国科<span lang="EN-US">学引文</span></span></span></a></span></span></p>
+                                      </td>
+                                      <td>&nbsp;
+                                          </td>
+                                  </tr>
+                                  <tr>
+                                      <td colspan="3">
+                                          <p align="left">
+                                              <strong>文献分析与科研管理</strong></p>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td colspan="3">
+                                          <strong>文献收集与整理</strong></td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/databases/ppt/chinese/gjhjywxcd.pdf"><span lang="EN-US"><span lang="EN-US">图书馆文献传递</span></span>/<span lang="EN-US"><span lang="EN-US">馆际互借服务介绍</span></span></a>&nbsp;&nbsp;&nbsp; &nbsp;<a href="http://lib.ustc.edu.cn/kis/srv2010/%E5%9B%BE%E4%B9%A6%E9%A6%86%E6%96%87%E7%8C%AE%E4%BC%A0%E9%80%92%E9%A6%86%E9%99%85%E4%BA%92%E5%80%9F%E4%BB%8B%E7%BB%8D.pdf">版本2</a></span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/services/srv2008/scientific%20literature%20ppt.zip"><span lang="EN-US"><span lang="EN-US">科技文献与科学研究</span></span></a></span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/services/srv2008/wos%20ppt.zip"><span lang="EN-US"><span lang="EN-US">一流的学术信息推动一流的学术研究</span></span></a></span></p>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/services/srv2008/chaoxing%20ppt.rar"><span lang="EN-US"><span lang="EN-US">数字图书馆给大学学习带来的创新</span></span></a></span></span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/services/srv2008/CSMAR%20ppt.rar"><span lang="EN-US"><span lang="EN-US">国泰安金融数据在实证研究中的作用</span></span></a></span></span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">
+                                              &nbsp;<span lang="EN-US"><a href="http://lib.ustc.edu.cn/kis/srv2010/%E4%B8%AD%E6%96%87%E6%96%87%E7%8C%AE%E6%A3%80%E7%B4%A2%E5%8F%8A%E6%A3%80%E7%B4%A2%E6%8A%80%E5%B7%A7.pdf"><span lang="EN-US"><span lang="EN-US">中文文献检索及检索技巧</span></span></a></span></p>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/services/srv2008/use%20sci%20ppt.rar"><span lang="EN-US"><span lang="EN-US">如何利用</span></span>SCI<span lang="EN-US"><span lang="EN-US">进行课题创新、发表高水平论文及申请基金</span></span></a></span></span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><span lang="EN-US">ISI</span>系列数据库使用及对教学科研管理评价的作用<span lang="EN-US">[<a>PPT<span lang="EN-US"><span lang="EN-US">下载</span></span></a> <a href="http://lib.ustc.edu.cn/dl/databases/20100415/20100415video.rar"><span lang="EN-US"><span lang="EN-US">视频下载</span></span></a>]</span></span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><span lang="EN-US"><a href="http://lib.ustc.edu.cn/kis/srv2010/%E5%88%A9%E7%94%A8WOS%E5%B8%AE%E5%8A%A9%E7%A1%95%E5%8D%9A%E5%A3%AB%E5%81%9A%E5%A5%BD%E5%BC%80%E9%A2%98%E6%8A%A5%E5%91%8A.pdf"><span lang="EN-US"><span lang="EN-US">利用</span></span>WOS<span lang="EN-US"><span lang="EN-US">帮助硕博士做好开题报告</span></span></a></span></span></p>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/services/srv2008/Inspec%20on%20WOK.rar"><span lang="EN-US"><span lang="EN-US">如何利用</span></span>Inspec<span lang="EN-US"><span lang="EN-US">数据库处理日常学习和科研问题</span></span></a></span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><span lang="EN-US"><a href="http://lib.ustc.edu.cn/kis/srv2010/EI%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%85%A8%E6%96%B9%E4%BD%8D%E5%88%A9%E7%94%A8.pdf">EI<span lang="EN-US"><span lang="EN-US">数据库的全方位利用</span></span></a></span></span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US">&nbsp;</span><span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/databases/ppt/chinese/iel.ppsx"><span lang="EN-US"><span lang="EN-US">全方位使用</span></span>IEEE/IET Electronic Library (IEL)<span lang="EN-US"><span lang="EN-US">数据库深入科学研究</span></span></a> <a href="http://lib.ustc.edu.cn/dl/databases/ppt/chinese/20100926.wmv"><span lang="EN-US"><span lang="EN-US">视频下载</span></span></a></span></p>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><span lang="EN-US"><a href="http://lib.ustc.edu.cn/uploads/soft/110520/10_1446506081.rar">科技写作与学术出版（Springer）</a></span></span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><span lang="EN-US"><span lang="EN-US"><span lang="EN-US"><span lang="EN-US"><a href="http://lib.ustc.edu.cn/kis/srv2010/%E4%BB%8E%E5%A4%A7%E5%AD%A6%E6%8E%92%E5%90%8D%E8%B0%88ESI%E7%9A%84%E7%A7%91%E7%A0%94%E8%AF%84%E4%BB%B7%E5%8A%9F%E8%83%BD.pdf"><span lang="EN-US"><span lang="EN-US">从大学排名谈</span></span>ESI<span lang="EN-US"><span lang="EN-US">的科研评价功能</span></span></a></span></span></span></span></span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><span lang="EN-US"><a href="http://lib.ustc.edu.cn/kis/srv2010/%E7%A7%91%E5%AD%A6%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1CiteSpace%E5%88%A9%E7%94%A8%E6%96%B9%E6%B3%95.pdf"><span lang="EN-US"><span lang="EN-US">科学知识图谱</span></span>CiteSpace<span lang="EN-US"><span lang="EN-US">利用方法</span></span></a></span></span></p>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><a href="http://lib.ustc.edu.cn/kis/srv2010/%E7%BB%8F%E6%B5%8E%E7%AE%A1%E7%90%86%E7%B1%BB%E7%94%B5%E5%AD%90%E8%B5%84%E6%BA%90%E7%9A%84%E6%A3%80%E7%B4%A2%E4%B8%8E%E5%88%A9%E7%94%A8.pdf"><span lang="EN-US"><span lang="EN-US">经济管理类电子资源的检索与利用</span></span></a></span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/databases/ppt/english/endnote.pdf"><span lang="EN-US"><span lang="EN-US">文献管理软件</span></span>Endnote<span lang="EN-US"><span lang="EN-US">专题培训</span></span></a></span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">
+                                              <a href="http://lib.ustc.edu.cn/uploads/soft/110311/10_1604413961.pptx"><span lang="EN-US">RSS</span>同步世界最新资讯</a></p>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><span lang="EN-US"><span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/services/srv2008/Socolar%20OA.rar">Socolar OA <span lang="EN-US"><span lang="EN-US">资源使用讲座</span></span></a></span></span></span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><span lang="EN-US"><span lang="EN-US"><a href="http://lib.ustc.edu.cn/kis/srv2010/OA%E8%B5%84%E6%BA%90%E5%9C%A8%E7%90%86%E5%B7%A5%E7%A7%91%E5%AD%A6%E7%9A%84%E5%BA%94%E7%94%A8.pdf">OA<span lang="EN-US"><span lang="EN-US">资源在理工科学的应用</span></span></a></span></span></span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><span lang="EN-US"><a href="http://lib.ustc.edu.cn/kis/srv2010/OA%E8%B5%84%E6%BA%90%E5%9C%A8%E4%BA%BA%E6%96%87%E7%A4%BE%E4%BC%9A%E7%A7%91%E5%AD%A6%E7%9A%84%E5%BA%94%E7%94%A8.pdf">OA<span lang="EN-US"><span lang="EN-US">资源在人文社会科学的应用</span></span></a></span></span></p>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><a href="http://lib.ustc.edu.cn/kis/srv2010/%E4%B8%AD%E5%A4%96%E4%B8%93%E5%88%A9%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E6%A3%80%E7%B4%A2%E4%B8%8E%E5%88%A9%E7%94%A8.pdf"><span lang="EN-US"><span lang="EN-US">中外专利数据库的检索与利用</span></span></a></span></p>
+                                      </td>
+                                      <td>&nbsp;
+                                          </td>
+                                      <td>&nbsp;
+                                          </td>
+                                  </tr>
+                                  <tr>
+                                      <td colspan="3">
+                                          <strong>论文写作与投稿</strong></td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/services/srv2008/Scientific%20Writing%20ppt.rar"><span lang="EN-US"><span lang="EN-US">科技写作与科研创新</span></span></a></span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/services/srv2008/elsevier.rar"><span lang="EN-US"><span lang="EN-US">如何在</span></span>Elsevier<span lang="EN-US"><span lang="EN-US">期刊上发表文章</span></span></a></span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/databases/ppt/english/SCI%2020090601.pdf"><span lang="EN-US"><span lang="EN-US">快乐写作与投稿</span></span>-SCI<span lang="EN-US"><span lang="EN-US">和</span></span>JCR<span lang="EN-US"><span lang="EN-US">数据库的使用</span></span></a></span></p>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <p align="left">
+                                              高水平科研论文写作与投稿讲座<span lang="EN-US"> [<a href="http://lib.ustc.edu.cn/uploads/soft/101027/10_0809289591.pdf">PDF<span lang="EN-US"><span lang="EN-US">下载</span></span></a>] [<a href="http://lib.ustc.edu.cn/dl/databases/ppt/chinese/20101026.wmv"><span lang="EN-US"><span lang="EN-US">视频下载</span></span></a>] </span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><a href="http://lib.ustc.edu.cn/uploads/soft/101210/10_0817194221.pptx"><span lang="EN-US"><span lang="EN-US">成功发表英文论文的作者策略</span></span></a></span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><a href="http://lib.ustc.edu.cn/kis/srv2010/%E8%8B%B1%E8%AF%AD%E7%A7%91%E6%8A%80%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E7%82%B9%E6%BB%B4.pdf"><span lang="EN-US"><span lang="EN-US">英文科技论文写作点滴</span></span></a></span></p>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/services/srv2010/Word%E7%9A%84%E6%B7%B1%E5%BA%A6%E2%80%94%E2%80%94%E8%AE%BA%E6%96%87%E6%8E%92%E7%89%88%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7.pdf">Word<span lang="EN-US"><span lang="EN-US">的深度</span></span>——<span lang="EN-US"><span lang="EN-US">论文排版常用技巧</span></span></a></span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><a href="http://lib.ustc.edu.cn/kis/srv2010/%E5%B7%A7%E7%94%A8Excel%E5%A4%84%E7%90%86%E5%92%8C%E5%88%86%E6%9E%90%E6%95%B0%E6%8D%AE.rar"><span lang="EN-US"><span lang="EN-US">巧用</span></span>Excel<span lang="EN-US"><span lang="EN-US">处理和分析数据</span></span></a></span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><a href="http://lib.ustc.edu.cn/kis/srv2010/WOS%E5%B9%B3%E5%8F%B0%E7%9A%84%E5%A4%9A%E5%B1%82%E6%AC%A1%E5%BA%94%E7%94%A8.pdf">WOS<span lang="EN-US"><span lang="EN-US">平台的多层次应用</span></span></a></span></p>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <p align="left">
+                                              &nbsp;<span lang="EN-US"><a href="http://lib.ustc.edu.cn/kis/srv2010/%E7%A7%91%E6%8A%80%E6%8A%A5%E5%91%8A%E5%9C%A8%E7%A1%95%E5%8D%9A%E5%BC%80%E9%A2%98%E5%92%8C%E7%A7%91%E7%A0%94%E4%B8%AD%E7%9A%84%E9%87%8D%E8%A6%81%E4%BD%9C%E7%94%A8.pdf"><span lang="EN-US"><span lang="EN-US">科技报告在硕博开题和科研中的重要作用</span></span></a></span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">
+                                              <span lang="EN-US"><a href="http://lib.ustc.edu.cn/dl/services/USTC_Nov_2011_Chinese.pptx">small编辑谈投稿</a></span></p>
+                                      </td>
+                                      <td>
+                                          <p align="left">&nbsp;
+                                              </p>
+                                      </td>
+                                  </tr>
+                              </tbody>
+                          </table>                             
+                        </div>
+                    </div>
+                </div>
+             <!---------InnerMainContWrap End---------------->   
+            </div>
+            
+            <div id="InnerFoot">
+            	<div class="InnerFootWrap">
+                	<div class="InFootFirstGrid">
+                    	<h2>友情链接</h2>
+                        <ul>
+                    		<li><a href="">+ 图书馆3D全景</a></li>
+                        	<li><a href="">+ 中国科大</a></li>
+                        	<li><a href="">+ 安徽省高校数字图书馆</a></li>
+                        	<li><a href="">+ CALIS</a></li>
+                        	<li><a href="">+ 国家科学图书馆</a></li>
+                        	<li><a href="">+ 栗子网(LISER)</a></li>
+                        	<li><a href="">+ 瀚海星云</a></li>
+                        	<li><a href="">+ 我校SCI最新成果</a></li>
+                        	<li><a href="">+ 在线科普图片</a></li>
+                        	<li><a href="">+ 会议室预订</a></li>
+                    	</ul>
+                    </div>
+                    <div class="InFootSecondGrid">
+                    	<h2>联系我们</h2>
+                        <ul>
+                    		<li>地址: 安徽省合肥市金寨路中国科大东区(230026)</li>
+                        	<li>电话: (0551)63602325、63607815、63602328 </li>
+                        	<li>传真:  (0551)63602325 </li>
+                        	<li>馆长:  lstian@ustc.edu.cn、liuyan@ustc.edu.cn</li>
+                    	</ul>
+                    </div>
+                </div>
+        	</div>
+            
+        </div>
+        
+        
+    <!--------------InnerWrap End -------------------->    
+    </div>
+</body>
+</html>
